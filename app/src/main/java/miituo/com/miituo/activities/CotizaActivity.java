@@ -19,14 +19,21 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import miituo.com.miituo.R;
 import miituo.com.miituo.api.ApiClient;
+import miituo.com.miituo.threats.GetUrlAsync;
+import miituo.com.miituo.utils.SimpleCallBack;
 
 public class CotizaActivity extends AppCompatActivity {
 
     public WebView vista;
     SharedPreferences app_preferences;
     public Boolean flagContrata = false;
+    Boolean flagClient = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,14 +48,6 @@ public class CotizaActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
         final ApiClient ac = new ApiClient(CotizaActivity.this);
-        /*FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });*/
 
         vista = (WebView)findViewById(R.id.vistaweb);
         WebSettings webSettings = vista.getSettings();
@@ -56,10 +55,50 @@ public class CotizaActivity extends AppCompatActivity {
         webSettings.setJavaScriptEnabled(true);
         webSettings.setDomStorageEnabled(true);
 
-        //vista.loadUrl("https://websitedev2019.miituo.com/Cotizar");
-        vista.setWebChromeClient(new WebChromeClient());
-        vista.loadUrl(ac.UrlCotiza);
+        flagClient = getIntent().getBooleanExtra("cliente",false);
+        Log.w("cliente", ""+flagClient);
 
+        app_preferences= getSharedPreferences("miituo", Context.MODE_PRIVATE);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        String url  = "Parameters/GetParameterByName/AppUrlAndroid";
+
+        GetUrlAsync gu = new GetUrlAsync(CotizaActivity.this, url, new SimpleCallBack(){
+            @Override
+            public void run(boolean status, String res) {
+                if (status){
+                    try{
+                        JSONArray array = new JSONArray(res);
+                        JSONObject o = array.getJSONObject(0);
+                        String url = o.getString("Valor");
+                        JSONObject obj= new JSONObject(url);
+                        String u2 = obj.getString("UrlNoClient");
+                        String u = obj.getString("UrlClient");
+
+                        if(flagClient)
+                            inicializarWeb(u);
+                        else
+                            inicializarWeb(u2);
+
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+                }else{
+
+                }
+            }
+        });
+        gu.execute();
+    }
+
+    public void inicializarWeb(String u){
+        Log.w("url cotiza:", u);
+        vista.setWebChromeClient(new WebChromeClient());
+        vista.loadUrl(u);
         vista.setWebViewClient(new WebViewClient() {
             @Override
             public boolean shouldOverrideUrlLoading(WebView view, String url){
@@ -81,9 +120,6 @@ public class CotizaActivity extends AppCompatActivity {
                 return true;
             }
         });
-
-        //vista.loadUrl(ac.UrlCotiza);
-        app_preferences= getSharedPreferences("miituo", Context.MODE_PRIVATE);
     }
 
     @Override

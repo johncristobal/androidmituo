@@ -172,6 +172,53 @@ public class ApiClient {
         }
     }
 
+    public String getUrl(String Url) throws IOException
+    {
+        final String TAG = "JsonParser.java";
+        InputStream in = null;
+
+        try {
+            URL url = new URL( UrlApi+Url+"");
+            HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
+            urlConnection.setReadTimeout(10000);
+            urlConnection.setConnectTimeout(15000);
+            urlConnection.setRequestMethod("GET");
+            urlConnection.setDoInput(true);
+            urlConnection.setRequestProperty("Authorization", miituoKey);
+            urlConnection.connect();
+            int statusCode = urlConnection.getResponseCode();
+
+            //Se verifica que la conexion sea exitosa...
+            if (statusCode != 200) {
+                String jsonstring = "";
+                //Log.d(TAG, "The response is: " + statusCode);
+            }
+            //Si la conexion es exitosa se obtiene la cadena del server...
+            else
+                in = urlConnection.getInputStream();
+            String jsonstring="";
+
+            //Se obtiene la cadena del bufer de entrada para retornarla y trabajar en el call back
+            //Mientras no sea vacia o nula...
+            try {
+                jsonstring=getStringFromInputStream(in);
+                if(jsonstring!=null || jsonstring!="") {
+                    return jsonstring;
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            return null;
+        }
+        //Cerramos el buffer de entrada ...
+        finally {
+            if(in!=null)
+            {
+                in.close();
+            }
+        }
+    }
+
     //Método para obtener kilometraje cupon...
     public String getCupon(String Url) throws IOException
     {

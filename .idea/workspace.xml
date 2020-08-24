@@ -16,146 +16,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="832192c8-8c1e-4c27-be84-e71f6025cf42" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/activities/GlobalActivity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/threats/GetCuponAsync.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/threats/GetPoliciesData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/threats/GetTokenSmsSync.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/threats/PutTokenSync.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/font/dinprobold.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/font/dinproregular.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/font/dinrltprobold.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/font/dinrltprolight.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/font/dinrltproregular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/font/dinroundedltpro.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout-v21/kms100.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.1/fileChanges/last-build.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.1/fileContent/fileContent.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.1/fileHashes/fileHashes.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.1/fileHashes/fileHashes.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.1/fileHashes/resourceHashesCache.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.1/javaCompile/classAnalysis.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.1/javaCompile/jarAnalysis.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.1/javaCompile/javaCompile.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.1/javaCompile/taskHistory.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.1/javaCompile/taskJars.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.1/taskHistory/fileSnapshots.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileChanges/last-build.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/release/app-release.apk" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/release/output.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/BroadKasTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/BroadKasTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/GcmIntentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/GcmIntentService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/Servicio/MyFirebaseMessagingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/Servicio/MyFirebaseMessagingService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/Servicio/TimerBroadcastReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/Servicio/TimerBroadcastReceiver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/Servicio/backPhotosService.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/Servicio/backPhotosService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/VehicleModelAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/VehicleModelAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/activities/AcercaActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/activities/AcercaActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/activities/AseguradorasActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/activities/AseguradorasActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/activities/AvisoActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/activities/AvisoActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/activities/BaseActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/activities/BaseActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/activities/CamActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/activities/CamActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/activities/CambioPagoActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/activities/CambioPagoActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/activities/CancelActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/activities/CancelActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/activities/ConfirmActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/activities/ConfirmActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/activities/ContactaActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/activities/ContactaActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/activities/ContratarActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/activities/ContratarActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/threats/GetUrlAsync.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/activities/CotizaActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/activities/CotizaActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/activities/CotizarAutoActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/activities/CotizarAutoActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/activities/DescriptionSellector.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/activities/DescriptionSellector.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/activities/DetallePlanActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/activities/DetallePlanActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/activities/DetallesActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/activities/DetallesActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/activities/DetallesPlanesActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/activities/DetallesPlanesActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/activities/InfoCancelActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/activities/InfoCancelActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/activities/LastOdometerActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/activities/LastOdometerActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/activities/MapsActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/activities/MapsActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/activities/NoReporteOdometroActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/activities/NoReporteOdometroActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/activities/NotificationsActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/activities/NotificationsActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/activities/PDFViewer.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/activities/PDFViewer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/activities/PlanesActivityTab.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/activities/PlanesActivityTab.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/activities/PrincipalActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/activities/PrincipalActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/activities/ShareSMActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/activities/ShareSMActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/activities/SyncActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/activities/SyncActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/activities/TerminosActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/activities/TerminosActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/activities/TextRecognizer.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/activities/TextRecognizer.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/activities/TicketActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/activities/TicketActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/activities/TokenSmsActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/activities/TokenSmsActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/activities/UnavailableSite.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/activities/UnavailableSite.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/activities/VehicleOdometer.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/activities/VehicleOdometer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/activities/VehiclePictures.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/activities/VehiclePictures.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/activities/WebActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/activities/WebActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/adapters/PromosAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/adapters/PromosAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/adapters/VehicleModelAdapterSelector.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/adapters/VehicleModelAdapterSelector.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/api/ApiClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/api/ApiClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/cotizar/CotizaAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/cotizar/CotizaAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/cotizar/Datosauto.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/cotizar/Datosauto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/cotizar/Datospersona.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/cotizar/Datospersona.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/cotizar/PagerAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/cotizar/PagerAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/fragments/PagerAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/fragments/PagerAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/fragments/TabFragment1.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/fragments/TabFragment1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/fragments/TabFragment2.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/fragments/TabFragment2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/fragments/TabFragment3.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/fragments/TabFragment3.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/fragments/TabFragment4.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/fragments/TabFragment4.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/swipe/SwipeActionTouchListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/swipe/SwipeActionTouchListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/swipe/SwipeDirection.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/swipe/SwipeDirection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/swipe/SwipeViewGroup.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/swipe/SwipeViewGroup.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/threats/AvailableSiteSync.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/threats/AvailableSiteSync.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/threats/GetPDFSync.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/threats/GetPDFSync.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/threats/GetSync.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/threats/GetSync.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/threats/GetTerminosPDFSync.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/threats/GetTerminosPDFSync.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/tuto/ImageFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/tuto/ImageFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/tuto/TutorialActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/tuto/TutorialActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/utils/BadgeDrawerArrowDrawable.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/utils/BadgeDrawerArrowDrawable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/utils/LogHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/utils/LogHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-land/activity_cam.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-land/activity_cam.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_acerca.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_acerca.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_aseguradoras.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_aseguradoras.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_aviso.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_aviso.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_cambio_pago.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_cambio_pago.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_cancel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_cancel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_confirm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_confirm.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_contacta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_contacta.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_contratar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_contratar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_cotiza.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_cotiza.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_cotizar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_cotizar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_description_sellector.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_description_sellector.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_detalle_plan.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_detalle_plan.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_detalles_planes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_detalles_planes.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_info_cancel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_info_cancel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_last_odometer.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_last_odometer.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_notifications.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_notifications.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_pdfviewer.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_pdfviewer.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_planes2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_planes2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_principal.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_principal.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_share_sm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_share_sm.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_sync.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_sync.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_terminos.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_terminos.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_ticket.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_ticket.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_token_sms.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_token_sms.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_tutorial.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_tutorial.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_vehicle_odometer.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_vehicle_odometer.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_vehicle_pictures.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_vehicle_pictures.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_view_pager_demo.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_view_pager_demo.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/app_bar_principal.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/app_bar_principal.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/content_autodatos.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/content_autodatos.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/content_detalles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/content_detalles.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/content_misdatos.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/content_misdatos.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/content_principal.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/content_principal.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/content_share_sm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/content_share_sm.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/content_sync.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/content_sync.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/content_token_sms.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/content_token_sms.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/content_tutorial.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/content_tutorial.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/infoclient_item.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/infoclient_item.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/kms100.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/kms100.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/plan_detail_layout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/plan_detail_layout.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/integers.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/integers.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -550,7 +416,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/activities/PrincipalActivity.java</url>
-          <line>1166</line>
+          <line>1168</line>
           <option name="timeStamp" value="27" />
         </line-breakpoint>
       </breakpoints>

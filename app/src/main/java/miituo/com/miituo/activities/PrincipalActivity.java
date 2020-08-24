@@ -247,6 +247,7 @@ public class PrincipalActivity extends AppCompatActivity
                                     startActivity(i);
                                 }else{
                                     Intent i = new Intent(PrincipalActivity.this, CotizaActivity.class);
+                                    i.putExtra("cliente",true);
                                     startActivity(i);
                                 }
                             } else {
@@ -1107,6 +1108,7 @@ public class PrincipalActivity extends AppCompatActivity
                                                 startActivity(i);
                                             }else{
                                                 Intent i = new Intent(PrincipalActivity.this, CotizaActivity.class);
+                                                i.putExtra("cliente",true);
                                                 startActivity(i);
                                             }
                                         } else {

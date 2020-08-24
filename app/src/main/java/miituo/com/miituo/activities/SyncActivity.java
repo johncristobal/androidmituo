@@ -463,6 +463,7 @@ public class SyncActivity extends AppCompatActivity {
                       }else{
                           Evento.eventRecord(SyncActivity.this,Evento.COTIZAR);
                           Intent i = new Intent(SyncActivity.this, CotizaActivity.class);
+                          i.putExtra("cliente",false);
                           startActivity(i);
                       }
                       //Intent i = new Intent(SyncActivity.this, CotizaActivity.class);
