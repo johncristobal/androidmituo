@@ -16,11 +16,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="832192c8-8c1e-4c27-be84-e71f6025cf42" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/threats/GetUrlAsync.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/activities/CotizaActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/activities/CotizaActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/activities/PrincipalActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/activities/PrincipalActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/activities/SyncActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/activities/SyncActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/api/ApiClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/api/ApiClient.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
