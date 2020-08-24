@@ -1,0 +1,559 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AndroidLayouts">
+    <shared>
+      <config />
+    </shared>
+  </component>
+  <component name="AndroidLogFilters">
+    <option name="TOOL_WINDOW_LOG_LEVEL" value="verbose" />
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="832192c8-8c1e-4c27-be84-e71f6025cf42" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/activities/GlobalActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/threats/GetCuponAsync.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/threats/GetPoliciesData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/threats/GetTokenSmsSync.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/threats/PutTokenSync.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/font/dinprobold.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/font/dinproregular.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/font/dinrltprobold.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/font/dinrltprolight.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/font/dinrltproregular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/font/dinroundedltpro.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout-v21/kms100.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.1/fileChanges/last-build.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.1/fileContent/fileContent.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.1/fileHashes/fileHashes.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.1/fileHashes/fileHashes.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.1/fileHashes/resourceHashesCache.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.1/javaCompile/classAnalysis.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.1/javaCompile/jarAnalysis.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.1/javaCompile/javaCompile.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.1/javaCompile/taskHistory.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.1/javaCompile/taskJars.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.1/taskHistory/fileSnapshots.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileChanges/last-build.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/release/app-release.apk" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/release/output.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/BroadKasTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/BroadKasTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/GcmIntentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/GcmIntentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/Servicio/MyFirebaseMessagingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/Servicio/MyFirebaseMessagingService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/Servicio/TimerBroadcastReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/Servicio/TimerBroadcastReceiver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/Servicio/backPhotosService.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/Servicio/backPhotosService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/VehicleModelAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/VehicleModelAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/activities/AcercaActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/activities/AcercaActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/activities/AseguradorasActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/activities/AseguradorasActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/activities/AvisoActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/activities/AvisoActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/activities/BaseActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/activities/BaseActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/activities/CamActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/activities/CamActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/activities/CambioPagoActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/activities/CambioPagoActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/activities/CancelActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/activities/CancelActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/activities/ConfirmActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/activities/ConfirmActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/activities/ContactaActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/activities/ContactaActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/activities/ContratarActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/activities/ContratarActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/activities/CotizaActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/activities/CotizaActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/activities/CotizarAutoActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/activities/CotizarAutoActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/activities/DescriptionSellector.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/activities/DescriptionSellector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/activities/DetallePlanActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/activities/DetallePlanActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/activities/DetallesActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/activities/DetallesActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/activities/DetallesPlanesActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/activities/DetallesPlanesActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/activities/InfoCancelActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/activities/InfoCancelActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/activities/LastOdometerActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/activities/LastOdometerActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/activities/MapsActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/activities/MapsActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/activities/NoReporteOdometroActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/activities/NoReporteOdometroActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/activities/NotificationsActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/activities/NotificationsActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/activities/PDFViewer.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/activities/PDFViewer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/activities/PlanesActivityTab.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/activities/PlanesActivityTab.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/activities/PrincipalActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/activities/PrincipalActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/activities/ShareSMActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/activities/ShareSMActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/activities/SyncActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/activities/SyncActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/activities/TerminosActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/activities/TerminosActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/activities/TextRecognizer.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/activities/TextRecognizer.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/activities/TicketActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/activities/TicketActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/activities/TokenSmsActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/activities/TokenSmsActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/activities/UnavailableSite.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/activities/UnavailableSite.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/activities/VehicleOdometer.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/activities/VehicleOdometer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/activities/VehiclePictures.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/activities/VehiclePictures.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/activities/WebActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/activities/WebActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/adapters/PromosAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/adapters/PromosAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/adapters/VehicleModelAdapterSelector.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/adapters/VehicleModelAdapterSelector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/api/ApiClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/api/ApiClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/cotizar/CotizaAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/cotizar/CotizaAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/cotizar/Datosauto.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/cotizar/Datosauto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/cotizar/Datospersona.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/cotizar/Datospersona.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/cotizar/PagerAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/cotizar/PagerAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/fragments/PagerAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/fragments/PagerAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/fragments/TabFragment1.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/fragments/TabFragment1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/fragments/TabFragment2.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/fragments/TabFragment2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/fragments/TabFragment3.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/fragments/TabFragment3.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/fragments/TabFragment4.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/fragments/TabFragment4.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/swipe/SwipeActionTouchListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/swipe/SwipeActionTouchListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/swipe/SwipeDirection.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/swipe/SwipeDirection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/swipe/SwipeViewGroup.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/swipe/SwipeViewGroup.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/threats/AvailableSiteSync.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/threats/AvailableSiteSync.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/threats/GetPDFSync.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/threats/GetPDFSync.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/threats/GetSync.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/threats/GetSync.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/threats/GetTerminosPDFSync.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/threats/GetTerminosPDFSync.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/tuto/ImageFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/tuto/ImageFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/tuto/TutorialActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/tuto/TutorialActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/utils/BadgeDrawerArrowDrawable.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/utils/BadgeDrawerArrowDrawable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/utils/LogHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/utils/LogHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-land/activity_cam.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-land/activity_cam.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_acerca.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_acerca.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_aseguradoras.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_aseguradoras.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_aviso.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_aviso.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_cambio_pago.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_cambio_pago.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_cancel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_cancel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_confirm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_confirm.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_contacta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_contacta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_contratar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_contratar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_cotiza.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_cotiza.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_cotizar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_cotizar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_description_sellector.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_description_sellector.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_detalle_plan.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_detalle_plan.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_detalles_planes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_detalles_planes.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_info_cancel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_info_cancel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_last_odometer.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_last_odometer.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_notifications.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_notifications.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_pdfviewer.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_pdfviewer.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_planes2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_planes2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_principal.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_principal.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_share_sm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_share_sm.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_sync.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_sync.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_terminos.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_terminos.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_ticket.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_ticket.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_token_sms.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_token_sms.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_tutorial.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_tutorial.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_vehicle_odometer.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_vehicle_odometer.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_vehicle_pictures.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_vehicle_pictures.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_view_pager_demo.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_view_pager_demo.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/app_bar_principal.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/app_bar_principal.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/content_autodatos.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/content_autodatos.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/content_detalles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/content_detalles.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/content_misdatos.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/content_misdatos.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/content_principal.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/content_principal.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/content_share_sm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/content_share_sm.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/content_sync.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/content_sync.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/content_token_sms.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/content_token_sms.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/content_tutorial.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/content_tutorial.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/infoclient_item.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/infoclient_item.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/kms100.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/kms100.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/plan_detail_layout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/plan_detail_layout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/integers.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/integers.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="testRunner" value="GRADLE" />
+    <option name="delegatedBuild" value="true" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="18e5a83c" />
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="DEVAndroid" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="resourceFile" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="GenerateSignedApkSettings">
+    <option name="EXPORT_PRIVATE_KEY" value="false" />
+    <option name="KEY_STORE_PATH" value="$USER_HOME$/Documents/miituo/miituoRele.jks" />
+    <option name="KEY_ALIAS" value="miituo" />
+    <option name="REMEMBER_PASSWORDS" value="true" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="26" />
+    <option name="y" value="52" />
+    <option name="width" value="1280" />
+    <option name="height" value="732" />
+  </component>
+  <component name="ProjectId" id="1dMejptAQPgIXt9s1jOYFbRsY0u" />
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>Android</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
+  </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ApkExportedModule" value="app" />
+    <property name="BundleExportedModule" value="app" />
+    <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="Pixel_3a_XL_API_29" />
+    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2020-07-20T17:52:10.307Z" />
+    <property name="ExportApk.ApkPath" value="$PROJECT_DIR$/app" />
+    <property name="ExportApk.BuildVariants" value="release" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="android.sdk.path" value="$USER_HOME$/Library/Android/sdk" />
+    <property name="device.picker.selection" value="34MDU16510001427" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="memory.settings.postsync.last.time.stamp" value="1598285432121" />
+    <property name="not.eligible.for.single.variant.sync" value="true" />
+    <property name="project.structure.last.edited" value="Build Variants" />
+    <property name="project.structure.proportion" value="0.17" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="show.migrate.to.gradle.popup" value="false" />
+    <property name="sync.plugin.last.upgrade.timestamp" value="1568302966174" />
+  </component>
+  <component name="PsdUISettings">
+    <option name="MODULE_TAB" value="Signing Configs" />
+    <option name="BUILD_VARIANTS_TAB" value="Build Types" />
+    <option name="LAST_EDITED_SIGNING_CONFIG" value="release" />
+    <option name="LAST_EDITED_BUILD_TYPE" value="release" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/src/main/res/font" />
+      <recent name="$PROJECT_DIR$/app/src/main/assets/fonts" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/src/main/res/font" />
+      <recent name="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/threats" />
+      <recent name="$PROJECT_DIR$/app/src/main/res/drawable-v24" />
+      <recent name="$PROJECT_DIR$/app/src/main/res/drawable" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="Applet">
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration name="&lt;template&gt;" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" default="true" selected="false">
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+    </configuration>
+    <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
+      <module name="app" />
+      <option name="DEPLOY" value="true" />
+      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+      <option name="DEPLOY_AS_INSTANT" value="false" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="DEBUGGER_TYPE" value="Auto" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Hybrid>
+      <Java />
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Native>
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Sample Java Methods" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="TestNG">
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration>$USER_HOME$/.subversion</configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="832192c8-8c1e-4c27-be84-e71f6025cf42" name="Default" comment="" />
+      <created>1551981020448</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1551981020448</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="245" y="176" key="#PSD" timestamp="1594679542017">
+      <screen x="0" y="23" width="1440" height="829" />
+    </state>
+    <state x="245" y="176" key="#PSD/0.23.1440.829@0.23.1440.829" timestamp="1594679542017" />
+    <state x="413" y="68" key="#app" timestamp="1594679549614">
+      <screen x="0" y="23" width="1440" height="829" />
+    </state>
+    <state x="413" y="68" key="#app/0.23.1440.829@0.23.1440.829" timestamp="1594679549614" />
+    <state x="184" y="99" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1594679005279">
+      <screen x="0" y="23" width="1440" height="829" />
+    </state>
+    <state x="184" y="99" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.829@0.23.1440.829" timestamp="1594679005279" />
+    <state x="533" y="153" key="#com.intellij.ide.util.MemberChooser" timestamp="1596428484011">
+      <screen x="0" y="23" width="1440" height="829" />
+    </state>
+    <state x="533" y="153" key="#com.intellij.ide.util.MemberChooser/0.23.1440.829@0.23.1440.829" timestamp="1596428484011" />
+    <state x="198" y="251" width="1043" height="374" key="#com.intellij.structuralsearch.plugin.ui.StructuralSearchDialog" timestamp="1595283586103">
+      <screen x="0" y="23" width="1440" height="829" />
+    </state>
+    <state x="176" y="225" width="927" height="331" key="#com.intellij.structuralsearch.plugin.ui.StructuralSearchDialog/0.23.1280.735@0.23.1280.735" timestamp="1593462721036" />
+    <state x="198" y="251" width="1043" height="374" key="#com.intellij.structuralsearch.plugin.ui.StructuralSearchDialog/0.23.1440.829@0.23.1440.829" timestamp="1595283586103" />
+    <state x="228" y="152" key="AndroidCreateResourceDirectoryDialog" timestamp="1594127146316">
+      <screen x="0" y="23" width="1280" height="735" />
+    </state>
+    <state x="228" y="152" key="AndroidCreateResourceDirectoryDialog/0.23.1280.735@0.23.1280.735" timestamp="1594127146316" />
+    <state x="228" y="152" key="AndroidCreateResourceFileDialog" timestamp="1594127190737">
+      <screen x="0" y="23" width="1280" height="735" />
+    </state>
+    <state x="228" y="152" key="AndroidCreateResourceFileDialog/0.23.1280.735@0.23.1280.735" timestamp="1594127190737" />
+    <state x="808" y="293" key="AndroidCreateXmlResourceDialog" timestamp="1594731516695">
+      <screen x="0" y="23" width="1440" height="829" />
+    </state>
+    <state x="808" y="293" key="AndroidCreateXmlResourceDialog/0.23.1440.829@0.23.1440.829" timestamp="1594731516695" />
+    <state width="501" height="466" key="DebuggerActiveHint" timestamp="1596427319101">
+      <screen x="0" y="23" width="1440" height="829" />
+    </state>
+    <state width="501" height="466" key="DebuggerActiveHint/0.23.1440.829@0.23.1440.829" timestamp="1596427319101" />
+    <state x="318" y="152" key="Downloadable.Font.Dialog.Size" timestamp="1594127711837">
+      <screen x="0" y="23" width="1280" height="735" />
+    </state>
+    <state x="318" y="152" key="Downloadable.Font.Dialog.Size/0.23.1280.735@0.23.1280.735" timestamp="1594127711836" />
+    <state x="0" y="447" width="1340" height="118" key="GridCell.Tab.-1.bottom" timestamp="1596206302041">
+      <screen x="0" y="23" width="1440" height="829" />
+    </state>
+    <state x="0" y="447" width="1340" height="118" key="GridCell.Tab.-1.bottom/0.23.1440.829@0.23.1440.829" timestamp="1596206302041" />
+    <state x="0" y="447" width="1340" height="118" key="GridCell.Tab.-1.center" timestamp="1596206302040">
+      <screen x="0" y="23" width="1440" height="829" />
+    </state>
+    <state x="0" y="447" width="1340" height="118" key="GridCell.Tab.-1.center/0.23.1440.829@0.23.1440.829" timestamp="1596206302040" />
+    <state x="0" y="447" width="1340" height="118" key="GridCell.Tab.-1.left" timestamp="1596206302039">
+      <screen x="0" y="23" width="1440" height="829" />
+    </state>
+    <state x="0" y="447" width="1340" height="118" key="GridCell.Tab.-1.left/0.23.1440.829@0.23.1440.829" timestamp="1596206302039" />
+    <state x="0" y="447" width="1340" height="118" key="GridCell.Tab.-1.right" timestamp="1596206302041">
+      <screen x="0" y="23" width="1440" height="829" />
+    </state>
+    <state x="0" y="447" width="1340" height="118" key="GridCell.Tab.-1.right/0.23.1440.829@0.23.1440.829" timestamp="1596206302041" />
+    <state width="1398" height="372" key="GridCell.Tab.0.bottom" timestamp="1597355249751">
+      <screen x="0" y="23" width="1440" height="829" />
+    </state>
+    <state width="1238" height="231" key="GridCell.Tab.0.bottom/0.23.1280.735@0.23.1280.735" timestamp="1594133611001" />
+    <state width="1398" height="372" key="GridCell.Tab.0.bottom/0.23.1440.829@0.23.1440.829" timestamp="1597355249751" />
+    <state width="1398" height="372" key="GridCell.Tab.0.center" timestamp="1597355249751">
+      <screen x="0" y="23" width="1440" height="829" />
+    </state>
+    <state width="1238" height="231" key="GridCell.Tab.0.center/0.23.1280.735@0.23.1280.735" timestamp="1594133611000" />
+    <state width="1398" height="372" key="GridCell.Tab.0.center/0.23.1440.829@0.23.1440.829" timestamp="1597355249751" />
+    <state width="1398" height="372" key="GridCell.Tab.0.left" timestamp="1597355249750">
+      <screen x="0" y="23" width="1440" height="829" />
+    </state>
+    <state width="1238" height="231" key="GridCell.Tab.0.left/0.23.1280.735@0.23.1280.735" timestamp="1594133611000" />
+    <state width="1398" height="372" key="GridCell.Tab.0.left/0.23.1440.829@0.23.1440.829" timestamp="1597355249750" />
+    <state width="1398" height="372" key="GridCell.Tab.0.right" timestamp="1597355249751">
+      <screen x="0" y="23" width="1440" height="829" />
+    </state>
+    <state width="1238" height="231" key="GridCell.Tab.0.right/0.23.1280.735@0.23.1280.735" timestamp="1594133611001" />
+    <state width="1398" height="372" key="GridCell.Tab.0.right/0.23.1440.829@0.23.1440.829" timestamp="1597355249751" />
+    <state x="0" y="462" width="1398" height="266" key="GridCell.Tab.1.bottom" timestamp="1596683000929">
+      <screen x="0" y="23" width="1440" height="829" />
+    </state>
+    <state width="1238" height="231" key="GridCell.Tab.1.bottom/0.23.1280.735@0.23.1280.735" timestamp="1594133611002" />
+    <state x="0" y="462" width="1398" height="266" key="GridCell.Tab.1.bottom/0.23.1440.829@0.23.1440.829" timestamp="1596683000929" />
+    <state x="0" y="462" width="1398" height="266" key="GridCell.Tab.1.center" timestamp="1596683000927">
+      <screen x="0" y="23" width="1440" height="829" />
+    </state>
+    <state width="1238" height="231" key="GridCell.Tab.1.center/0.23.1280.735@0.23.1280.735" timestamp="1594133611002" />
+    <state x="0" y="462" width="1398" height="266" key="GridCell.Tab.1.center/0.23.1440.829@0.23.1440.829" timestamp="1596683000927" />
+    <state x="0" y="462" width="1398" height="266" key="GridCell.Tab.1.left" timestamp="1596683000919">
+      <screen x="0" y="23" width="1440" height="829" />
+    </state>
+    <state width="1238" height="231" key="GridCell.Tab.1.left/0.23.1280.735@0.23.1280.735" timestamp="1594133611002" />
+    <state x="0" y="462" width="1398" height="266" key="GridCell.Tab.1.left/0.23.1440.829@0.23.1440.829" timestamp="1596683000919" />
+    <state x="0" y="462" width="1398" height="266" key="GridCell.Tab.1.right" timestamp="1596683000928">
+      <screen x="0" y="23" width="1440" height="829" />
+    </state>
+    <state width="1238" height="231" key="GridCell.Tab.1.right/0.23.1280.735@0.23.1280.735" timestamp="1594133611002" />
+    <state x="0" y="462" width="1398" height="266" key="GridCell.Tab.1.right/0.23.1440.829@0.23.1440.829" timestamp="1596683000928" />
+    <state x="0" y="462" width="1340" height="118" key="GridCell.Tab.2.bottom" timestamp="1596205973637">
+      <screen x="0" y="23" width="1440" height="829" />
+    </state>
+    <state x="0" y="462" width="1340" height="118" key="GridCell.Tab.2.bottom/0.23.1440.829@0.23.1440.829" timestamp="1596205973637" />
+    <state x="0" y="462" width="1340" height="118" key="GridCell.Tab.2.center" timestamp="1596205973636">
+      <screen x="0" y="23" width="1440" height="829" />
+    </state>
+    <state x="0" y="462" width="1340" height="118" key="GridCell.Tab.2.center/0.23.1440.829@0.23.1440.829" timestamp="1596205973636" />
+    <state x="0" y="462" width="1340" height="118" key="GridCell.Tab.2.left" timestamp="1596205973636">
+      <screen x="0" y="23" width="1440" height="829" />
+    </state>
+    <state x="0" y="462" width="1340" height="118" key="GridCell.Tab.2.left/0.23.1440.829@0.23.1440.829" timestamp="1596205973636" />
+    <state x="0" y="462" width="1340" height="118" key="GridCell.Tab.2.right" timestamp="1596205973636">
+      <screen x="0" y="23" width="1440" height="829" />
+    </state>
+    <state x="0" y="462" width="1340" height="118" key="GridCell.Tab.2.right/0.23.1440.829@0.23.1440.829" timestamp="1596205973636" />
+    <state x="141" y="29" key="SettingsEditor" timestamp="1592344163948">
+      <screen x="0" y="23" width="1280" height="735" />
+    </state>
+    <state x="141" y="29" key="SettingsEditor/0.23.1280.735@0.23.1280.735" timestamp="1592344163948" />
+    <state x="100" y="123" width="1240" height="629" key="com.android.tools.idea.avdmanager.AvdListDialog" timestamp="1595267519359">
+      <screen x="0" y="23" width="1440" height="829" />
+    </state>
+    <state x="100" y="123" width="1240" height="629" key="com.android.tools.idea.avdmanager.AvdListDialog/0.23.1440.829@0.23.1440.829" timestamp="1595267519359" />
+    <state x="289" y="223" key="com.intellij.ide.util.TipDialog" timestamp="1598284569352">
+      <screen x="0" y="23" width="1280" height="734" />
+    </state>
+    <state x="289" y="223" key="com.intellij.ide.util.TipDialog/0.23.1280.734@0.23.1280.734" timestamp="1598284569352" />
+    <state x="289" y="223" key="com.intellij.ide.util.TipDialog/0.23.1280.735@0.23.1280.735" timestamp="1594234285639" />
+    <state x="325" y="249" key="com.intellij.ide.util.TipDialog/0.23.1440.829@0.23.1440.829" timestamp="1596717131711" />
+    <state x="0" y="462" width="1340" height="134" key="dock-window-1" timestamp="1596206302556">
+      <screen x="0" y="23" width="1440" height="829" />
+    </state>
+    <state x="0" y="462" width="1340" height="134" key="dock-window-1/0.23.1440.829@0.23.1440.829" timestamp="1596206302556" />
+    <state x="0" y="447" width="1340" height="134" key="dock-window-2" timestamp="1596206302556">
+      <screen x="0" y="23" width="1440" height="829" />
+    </state>
+    <state x="0" y="447" width="1340" height="134" key="dock-window-2/0.23.1440.829@0.23.1440.829" timestamp="1596206302556" />
+    <state x="385" y="176" width="670" height="676" key="search.everywhere.popup" timestamp="1596399803790">
+      <screen x="0" y="23" width="1440" height="829" />
+    </state>
+    <state x="385" y="176" width="670" height="676" key="search.everywhere.popup/0.23.1440.829@0.23.1440.829" timestamp="1596399803790" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/cotizar/ApiClientCotiza.java</url>
+          <line>550</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/cotizar/ApiClientCotiza.java</url>
+          <line>571</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/activities/PrincipalActivity.java</url>
+          <line>1166</line>
+          <option name="timeStamp" value="27" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

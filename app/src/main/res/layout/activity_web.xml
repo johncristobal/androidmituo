@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activities.WebActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:visibility="visible"
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:theme="@style/ToolbarColoredBackArrow"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <RelativeLayout
+        android:id="@+id/cntPagar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:background="#fff">
+        <TextView
+            android:id="@+id/lbPagos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Seleccione una forma de pago"
+            android:textStyle="bold"
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/cntCupon"
+            android:gravity="center_horizontal"
+            android:textSize="15sp"/>
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/cntMetodos"
+            android:layout_below="@+id/lbPagos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:id="@+id/cntTarjetas"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginRight="10dp"
+                android:gravity="center"
+                android:background="@drawable/blueborder"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="140dp"
+                    android:layout_height="47dp"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/prosa"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/cntAmex"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:background="@drawable/border"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="140dp"
+                    android:layout_height="47dp"
+                    app:srcCompat="@drawable/amex"/>
+            </LinearLayout>
+        </LinearLayout>
+        <WebView
+            android:id="@+id/wvPago"
+            android:layout_below="@id/cntMetodos"
+            android:layout_width="match_parent"
+            android:layout_marginTop="5dp"
+            android:layout_height="680dp"
+            android:paddingBottom="20px"
+            />
+
+    </RelativeLayout>
+
+</LinearLayout>

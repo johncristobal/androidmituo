@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/cotizacion"
+        android:icon="@drawable/cotizacion"
+        android:title="@string/title_home" />
+
+    <item
+        android:id="@+id/auto"
+        android:icon="@drawable/carrito"
+        android:title="@string/title_dashboard" />
+
+    <item
+        android:id="@+id/datos"
+        android:icon="@drawable/autos"
+        android:title="@string/title_notifications" />
+
+</menu>

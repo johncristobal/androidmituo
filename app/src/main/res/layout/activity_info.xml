@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".activities.MainActivity">
+
+    <TextView
+        android:id="@+id/lbTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="30dp"
+        android:textStyle="bold"
+        android:text="Renovación de póliza"
+        android:textSize="22sp"
+        android:gravity="center"
+        android:textColor="#000000"
+        />
+
+    <TextView
+        android:id="@+id/lb1"
+        android:layout_below="@+id/lbTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="35dp"
+        android:layout_marginLeft="35dp"
+        android:text="Renovación de póliza"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:textColor="#000000"
+        />
+
+    <TextView
+        android:id="@+id/lb2"
+        android:layout_below="@+id/lb1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="35dp"
+        android:layout_marginLeft="35dp"
+        android:text="Renovación de póliza"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:layout_marginTop="-20dp"
+        android:textColor="#000000"
+        />
+
+    <TextView
+        android:id="@+id/lbOK"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="25dp"
+        android:paddingBottom="7dp"
+        android:paddingTop="7dp"
+        android:paddingRight="40dp"
+        android:paddingLeft="40dp"
+        android:background="@drawable/button"
+        android:text="CERRAR"
+        android:onClick="entendido"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp" />
+
+    <RelativeLayout
+        android:id="@+id/cnt1"
+        android:layout_width="match_parent"
+        android:layout_below="@id/lb2"
+        android:layout_marginTop="15dp"
+        android:background="#F9F9F9"
+        android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        >
+    <LinearLayout
+        android:id="@+id/cnt12"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:id="@+id/lbPagoUnico"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="Pago único"
+            android:gravity="center_horizontal|bottom"
+            android:textSize="18sp"/>
+        <TextView
+            android:id="@+id/lbCosto"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="$561.00"
+            android:gravity="center_horizontal|bottom"
+            android:textSize="22sp"/>
+    </LinearLayout>
+        <TextView
+            android:id="@+id/lbSeguro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="11sp"
+            android:layout_below="@+id/cnt12"
+            android:layout_marginTop="15dp"
+            android:text="Seguro de responsabilidad civil"
+            />
+    </RelativeLayout>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/lbPlan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#000000"
+        android:layout_below="@id/cnt1"
+        android:layout_marginTop="15dp"
+        android:text="Tu tarifa para el siguiente año es de:"
+        android:gravity="center"
+        android:textSize="16sp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/cnt2"
+        android:layout_marginTop="10dp"
+        android:background="#F9F9F9"
+        android:layout_below="@id/lbPlan">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:gravity="bottom"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        >
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
+            android:orientation="vertical"
+            android:gravity="center_vertical"
+            android:layout_height="match_parent">
+            <TextView
+            android:id="@+id/lbTarifa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Plan amplio"
+            android:textColor="#000000"
+            android:layout_marginTop="-5dp"
+            android:textSize="16sp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:gravity="center"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:id="@+id/lbCostoTarifa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$561.00"
+                android:textColor="#000000"
+                android:gravity="center_horizontal|bottom"
+                android:textSize="20sp"/>
+            <TextView
+                android:id="@+id/lbkm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="por km"
+                android:gravity="center_horizontal"
+                android:textSize="12sp"/>
+        </LinearLayout>
+    </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/cntCancelar"
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cnt2"
+        android:gravity="center_horizontal"
+        android:layout_above="@+id/lbOK"
+        android:orientation="vertical"
+        >
+        <TextView
+            android:id="@+id/lbl1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:text="Si no deseas renovar tu póliza"
+            android:gravity="center"
+            android:textSize="16sp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:gravity="center">
+            <TextView
+                android:id="@+id/lbl2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:text="llámanos al: "
+                android:gravity="center"
+                android:textSize="16sp" />
+            <TextView
+                android:id="@+id/lbl3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/azul_miituo"
+                android:text=" (55) 8421 0500"
+                android:gravity="center"
+                android:textSize="16sp" />
+        </LinearLayout>
+        <TextView
+            android:id="@+id/lbl4"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/azul_miituo"
+            android:text="01 800 953 0059"
+            android:gravity="center"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+</RelativeLayout>

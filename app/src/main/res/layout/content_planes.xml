@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#fff"
+        android:id="@+id/appBarLayout">
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:textSize="20sp"
+            android:textColor="#000"
+            android:text="Cotizar" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="30dp"
+            android:layout_height="20dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="25dp"
+            app:srcCompat="@mipmap/sobre2x"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="25dp" />
+
+        <ImageView
+            android:id="@+id/imageView7"
+            android:layout_width="25dp"
+            android:layout_height="20dp"
+            android:layout_alignParentLeft="true"
+            app:srcCompat="@drawable/backarrow"
+            android:layout_marginLeft="15dp"
+            android:layout_alignTop="@+id/textView3"
+            android:layout_marginTop="5dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="15dp" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/appBarLayout"
+        android:layout_marginLeft="25dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="5dp"
+        android:text="Esto es lo que te proponemos" />
+
+    <ListView
+        android:id="@+id/listaplanes"
+        android:layout_width="match_parent"
+        android:divider="@null"
+        android:dividerHeight="1dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/relativeLayout3"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textView4"
+        android:layout_marginLeft="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="10dp" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/backspinner"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="10dp">
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:text="Te enviamos la cotización a tu correo" />
+
+        <RelativeLayout
+            android:id="@+id/relativeLayoutNombre"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_alignLeft="@+id/textView9"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="5dp"
+            android:layout_alignStart="@+id/textView9"
+            android:layout_below="@+id/textView9"
+            android:background="@drawable/backspinner"
+            android:orientation="horizontal"
+            android:ems="10"
+            android:layout_marginRight="5dp">
+
+            <EditText
+                android:id="@+id/editTextnombre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:backgroundTint="@android:color/transparent"
+                android:hint="Nombre"
+                android:inputType="textPersonName"
+                android:textSize="12sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:id="@+id/relativeLayoutCorreo"
+            android:layout_alignLeft="@+id/relativeLayoutNombre"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignStart="@+id/relativeLayoutNombre"
+            android:layout_below="@+id/relativeLayoutNombre"
+            android:background="@drawable/backspinner"
+            android:orientation="horizontal"
+            android:ems="10"
+            android:layout_marginRight="5dp"
+            android:layout_marginEnd="5dp">
+
+            <EditText
+                android:id="@+id/editTextCorreo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:backgroundTint="@android:color/transparent"
+                android:hint="Correo"
+                android:inputType="textEmailAddress"
+                android:textSize="12sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:id="@+id/relativeLayoutTelefono"
+            android:layout_alignLeft="@+id/relativeLayoutNombre"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignStart="@+id/relativeLayoutNombre"
+            android:layout_below="@+id/relativeLayoutCorreo"
+            android:background="@drawable/backspinner"
+            android:orientation="horizontal"
+            android:ems="10"
+            android:layout_marginRight="5dp"
+            android:layout_marginEnd="5dp">
+
+            <EditText
+                android:id="@+id/editTextTelefono"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:backgroundTint="@android:color/transparent"
+                android:hint="Telefono"
+                android:inputType="phone"
+                android:textSize="12sp" />
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginTop="15dp"
+            android:layout_alignEnd="@+id/relativeLayoutNombre"
+            android:layout_below="@+id/relativeLayoutTelefono"
+            android:background="@drawable/backbutton"
+            android:textColor="#fff"
+            android:text="Enviar"
+            android:layout_alignRight="@+id/relativeLayoutNombre" />
+    </RelativeLayout>
+</RelativeLayout>

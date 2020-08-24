@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eeeeee"
+    tools:context=".activities.NotificationsActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+    android:visibility="visible"
+    android:id="@+id/title"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:theme="@style/AppTheme.AppBarOverlay">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:theme="@style/ToolbarColoredBackArrow"
+        app:popupTheme="@style/AppTheme.PopupOverlay" />
+</com.google.android.material.appbar.AppBarLayout>
+
+
+    <LinearLayout
+        android:id="@+id/cntPushes"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#eeeeee"
+        android:layout_margin="10dp"
+        android:layout_below="@+id/title"
+        android:orientation="vertical">
+
+        <ListView
+            android:id="@+id/listPushes"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:footerDividersEnabled="true"
+            android:dividerHeight="15dp"
+            android:divider="#eeeeee"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/cntNoPush"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:layout_margin="10dp"
+        android:layout_below="@+id/title"
+        android:orientation="vertical">
+        <ImageView
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginTop="30dp"
+            app:srcCompat="@drawable/no_notifications"
+            android:layout_gravity="center_horizontal" />
+        <TextView
+            android:id="@+id/lb1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:layout_gravity="center_horizontal"
+            android:text="No tienes mensajes."/>
+
+        <TextView
+            android:id="@+id/lbAceptar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingBottom="7dp"
+            android:paddingTop="7dp"
+            android:paddingRight="25dp"
+            android:paddingLeft="25dp"
+            android:background="@drawable/backbutton"
+            android:layout_gravity="center_horizontal"
+            android:text="OK"
+            android:textSize="14sp"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="40dp"
+            android:textColor="#fff"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".activities.CamActivity"
+    android:id="@+id/cntCam"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <android.view.SurfaceView
+        android:id="@+id/surface"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+    <LinearLayout
+        android:id="@+id/arriba"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/mirilla"
+        android:layout_alignParentTop="true"
+        android:background="#AB232323">
+        <TextView
+            android:id="@+id/lbAyuda"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#FFFFFF"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:text="Alinea el odómetro"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/abajo"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/mirilla"
+        android:layout_alignParentBottom="true"
+        android:background="#AB232323"
+        />
+    <LinearLayout
+        android:id="@+id/izq"
+        android:orientation="horizontal"
+        android:layout_width="33dp"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/abajo"
+        android:layout_below="@+id/arriba"
+        android:layout_alignParentLeft="true"
+        android:background="#AB232323"
+        />
+
+    <LinearLayout
+        android:id="@+id/der"
+        android:orientation="horizontal"
+        android:layout_width="33dp"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/abajo"
+        android:layout_below="@+id/arriba"
+        android:layout_alignParentRight="true"
+        android:background="#AB232323"
+        />
+
+    <LinearLayout
+        android:id="@+id/mirilla"
+        android:layout_width="match_parent"
+        android:layout_toLeftOf="@+id/der"
+        android:layout_toRightOf="@+id/izq"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@drawable/blueborder_cam"
+        />
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#AB232323"
+            />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imgZoom"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:tint="@color/azul_miituo"
+        android:layout_above="@+id/lbCapturar"
+        android:layout_marginBottom="10dp"
+        android:layout_alignLeft="@+id/lbCapturar"
+        android:src="@android:drawable/ic_menu_zoom"/>
+    <SeekBar
+        android:id="@+id/zoomer"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="#CCCCCC"
+        android:layout_above="@+id/lbCapturar"
+        android:layout_marginBottom="10dp"
+        android:layout_toRightOf="@+id/imgZoom"
+        android:layout_alignRight="@+id/lbCapturar"
+        android:layout_marginLeft="10dp" />
+    <TextView
+        android:id="@+id/lbCapturar"
+        android:layout_width="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="10dp"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:background="@drawable/backbutton"
+        android:text="Tomar Foto"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:onClick="tomarFoto"
+        android:textColor="#fff" />
+</RelativeLayout>

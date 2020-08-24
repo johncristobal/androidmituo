@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff">
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:text="Vamos a cotizar tu seguro miituo" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView"
+        android:layout_alignStart="@+id/textView"
+        android:layout_below="@+id/textView"
+        android:layout_marginTop="15dp"
+        android:text="Tu auto"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_alignLeft="@+id/textView2"
+        android:layout_alignStart="@+id/textView2"
+        android:layout_below="@+id/textView2"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/backspinner"
+        android:layout_marginRight="10dp"
+        android:orientation="horizontal"
+        android:layout_marginEnd="10dp">
+
+        <Spinner
+            android:id="@+id/spinner2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:layout_marginLeft="5dp"
+            android:layout_marginStart="5dp"
+            android:background="@android:color/transparent"
+            android:gravity="center"
+            android:spinnerMode="dropdown" />
+
+        <TextView
+            android:id="@+id/textViewback"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/imagen11"
+            android:layout_toStartOf="@+id/imagen11"
+            android:background="#f1f1f1"
+            android:text=""
+            android:layout_marginEnd="10dp" />
+
+        <ImageView
+            android:id="@+id/imagen11"
+            android:layout_width="15dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:layout_marginEnd="15dp"
+            android:layout_marginRight="15dp"
+            android:contentDescription="@string/icon"
+            android:src="@mipmap/blue" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayoutanio"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_alignEnd="@+id/relativeLayout"
+        android:layout_alignLeft="@+id/textView2"
+        android:layout_alignRight="@+id/relativeLayout"
+        android:layout_alignStart="@+id/textView2"
+        android:layout_below="@+id/relativeLayout"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/backspinner"
+        android:orientation="horizontal">
+
+        <Spinner
+            android:id="@+id/spinneranio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:layout_marginLeft="5dp"
+            android:layout_marginStart="5dp"
+            android:background="@android:color/transparent"
+            android:gravity="center"
+            android:spinnerMode="dropdown" />
+
+        <TextView
+            android:id="@+id/textViewback2"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/imagen22"
+            android:layout_toStartOf="@+id/imagen22"
+            android:background="#f1f1f1"
+            android:text=""
+            android:layout_marginEnd="10dp" />
+
+        <ImageView
+            android:id="@+id/imagen22"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:layout_marginEnd="15dp"
+            android:layout_marginRight="15dp"
+            android:contentDescription="@string/icon"
+            android:src="@mipmap/blue" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayoutmarca"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_alignEnd="@+id/relativeLayoutanio"
+        android:layout_alignLeft="@+id/textView2"
+        android:layout_alignRight="@+id/relativeLayoutanio"
+        android:layout_alignStart="@+id/textView2"
+        android:layout_below="@+id/relativeLayoutanio"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/backspinner"
+        android:orientation="horizontal">
+
+        <Spinner
+            android:id="@+id/spinnermarca"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:layout_marginLeft="5dp"
+            android:layout_marginStart="5dp"
+            android:background="@android:color/transparent"
+            android:gravity="center"
+            android:spinnerMode="dropdown" />
+
+        <TextView
+            android:id="@+id/textViewback3"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/imagen33"
+            android:layout_toStartOf="@+id/imagen33"
+            android:background="#f1f1f1"
+            android:text=""
+            android:layout_marginEnd="10dp" />
+
+        <ImageView
+            android:id="@+id/imagen33"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:layout_marginEnd="15dp"
+            android:layout_marginRight="15dp"
+            android:contentDescription="@string/icon"
+            android:src="@mipmap/blue" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayoutsubtipos"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_alignEnd="@+id/relativeLayoutmarca"
+        android:layout_alignLeft="@+id/textView2"
+        android:layout_alignRight="@+id/relativeLayoutmarca"
+        android:layout_alignStart="@+id/textView2"
+        android:layout_below="@+id/relativeLayoutmarca"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/backspinner"
+        android:orientation="horizontal">
+
+        <Spinner
+            android:id="@+id/spinnersubtipo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:layout_marginLeft="5dp"
+            android:layout_marginStart="5dp"
+            android:background="@android:color/transparent"
+            android:gravity="center"
+            android:spinnerMode="dropdown" />
+
+        <TextView
+            android:id="@+id/textViewback4"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/imagen44"
+            android:layout_toStartOf="@+id/imagen44"
+            android:background="#f1f1f1"
+            android:text=""
+            android:layout_marginEnd="10dp" />
+
+        <ImageView
+            android:id="@+id/imagen44"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:layout_marginEnd="15dp"
+            android:layout_marginRight="15dp"
+            android:contentDescription="@string/icon"
+            android:src="@mipmap/blue" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayoutdescripcion"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_alignEnd="@+id/relativeLayoutsubtipos"
+        android:layout_alignLeft="@+id/textView2"
+        android:layout_alignRight="@+id/relativeLayoutsubtipos"
+        android:layout_alignStart="@+id/textView2"
+        android:layout_below="@+id/relativeLayoutsubtipos"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/backspinner"
+        android:orientation="horizontal">
+
+        <Spinner
+            android:id="@+id/spinnerdescripcion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:layout_marginLeft="5dp"
+            android:layout_marginStart="5dp"
+            android:background="@android:color/transparent"
+            android:gravity="center"
+            android:spinnerMode="dropdown" />
+
+        <TextView
+            android:id="@+id/textViewback5"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/imagen55"
+            android:layout_toStartOf="@+id/imagen55"
+            android:background="#f1f1f1"
+            android:text=""
+            android:layout_marginEnd="10dp" />
+
+        <ImageView
+            android:id="@+id/imagen55"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:layout_marginEnd="15dp"
+            android:layout_marginRight="15dp"
+            android:contentDescription="@string/icon"
+            android:src="@mipmap/blue" />
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/relativeLayoutdescripcion"
+        android:layout_alignRight="@+id/relativeLayoutdescripcion"
+        android:layout_below="@+id/relativeLayoutdescripcion"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/backbutton"
+        android:onClick="NextStep"
+        android:text="Next" />
+
+</RelativeLayout>

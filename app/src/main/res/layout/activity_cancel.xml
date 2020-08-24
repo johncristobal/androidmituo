@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.CancelActivity"
+    android:orientation="vertical"
+    android:background="#e9e9e9">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:visibility="visible"
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary"
+            app:theme="@style/ToolbarColoredBackArrow"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:background="#FFFFFF"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="50dp"
+            app:srcCompat="@drawable/cancela_poliza"
+            android:layout_gravity="center_horizontal"/>
+
+        <TextView
+            android:id="@+id/lb1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginBottom="30dp"
+            android:lineSpacingMultiplier="1.5"
+            android:text="Sí deseas cancelar tu póliza por favor ponte en contacto con nosotros al"/>
+
+        <TextView
+            android:id="@+id/lbAceptar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingBottom="7dp"
+            android:paddingTop="7dp"
+            android:paddingRight="25dp"
+            android:paddingLeft="25dp"
+            android:background="@drawable/backbutton"
+            android:layout_gravity="center_horizontal"
+            android:text="Llamar ahora"
+            android:textSize="14sp"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="40dp"
+            android:textColor="#fFFFff"/>
+    </LinearLayout>
+</LinearLayout>
