@@ -387,7 +387,7 @@ public class VehicleOdometer extends BaseActivity {
                                                     IinfoClient.getInfoClientObject().getPolicies().setLastOdometer(IinfoClient.getInfoClientObject().getPolicies().getRegOdometer());
                                                     IinfoClient.getInfoClientObject().getPolicies().setReportState(12);
 
-                                                    String rs = UpdateDataBase(modelBase.FeedEntryPoliza.TABLE_NAME,IinfoClient.getInfoClientObject().getPolicies().getNoPolicy());
+                                                    //String rs = UpdateDataBase(modelBase.FeedEntryPoliza.TABLE_NAME,IinfoClient.getInfoClientObject().getPolicies().getNoPolicy());
 
                                                     Intent i = new Intent(VehicleOdometer.this, PrincipalActivity.class);
                                                     i.putExtra("actualizar","1");

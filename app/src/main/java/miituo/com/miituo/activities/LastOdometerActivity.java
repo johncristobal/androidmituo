@@ -1021,6 +1021,7 @@ public class LastOdometerActivity extends AppCompatActivity {
                         }
                         dialog.show();
                     }catch(Exception e){
+
                         e.printStackTrace();
                     }
                 }
@@ -1033,8 +1034,6 @@ public class LastOdometerActivity extends AppCompatActivity {
             e.printStackTrace();
         }
     }
-
-
 
     public void saygoodbye(){
         AsyncTask<Void, Void, Void> sendthelast = new AsyncTask<Void, Void, Void>() {
@@ -1129,7 +1128,7 @@ public class LastOdometerActivity extends AppCompatActivity {
                                     IinfoClient.getInfoClientObject().getPolicies().setReportState(12);
                                     IinfoClient.getInfoClientObject().getPolicies().setLastOdometer(IinfoClient.getInfoClientObject().getPolicies().getRegOdometer());
 
-                                    String rs = UpdateDataBase(modelBase.FeedEntryPoliza.TABLE_NAME,IinfoClient.getInfoClientObject().getPolicies().getNoPolicy());
+                                    //String rs = UpdateDataBase(modelBase.FeedEntryPoliza.TABLE_NAME,IinfoClient.getInfoClientObject().getPolicies().getNoPolicy());
 //                                    IinfoClient.getInfoClientObject().getPolicies().setMensualidad(10);
                                     if(IinfoClient.getInfoClientObject().getPolicies().getMensualidad()==10){
                                         getNewQuotation(10);
