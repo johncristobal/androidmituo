@@ -880,14 +880,21 @@ public class LastOdometerActivity extends AppCompatActivity {
                                     "","id:"+IinfoClient.getInfoClientObject().getPolicies().getId(),"");
                             for (int i=0;i<cupones.length();i++) {
                                 JSONObject o = cupones.getJSONObject(i);
-                                if(o.getInt("Type")==3){
+                                //if(o.getInt("Type")==3){
+                                if(o.getInt("Type")==3 || o.getInt("Type")==5){
                                     lbVacaciones.setVisibility(View.VISIBLE);
                                     LinearLayout ll=(LinearLayout)dialog.findViewById(R.id.cntVacaciones);
                                     ll.setVisibility(View.VISIBLE);
                                     diferencia=parametro_tope_kms;
                                     lbVacaciones2.setText(diferencia);
                                     if(cupones.length()==2){
-                                        JSONObject o2 = cupones.getJSONObject(i+1);
+                                        //JSONObject o2 = cupones.getJSONObject(i+1);
+                                        JSONObject o2 = cupones.getJSONObject(0);
+                                        if (o.getInt("Type")==5){
+                                            o2 = cupones.getJSONObject(0);
+                                        }else{
+                                            o2 = cupones.getJSONObject(1);
+                                        }
                                         int dif=Integer.parseInt(parametro_tope_kms)-o2.getInt("Kms");
                                         diferencia=""+dif;
                                         LinearLayout ll2=(LinearLayout)dialog.findViewById(R.id.cntReferidos);
@@ -1013,8 +1020,7 @@ public class LastOdometerActivity extends AppCompatActivity {
                         ending2.setTypeface(typefacebold);
                         //ending.setText(formatter.format(s1));
                         if(datoamount.equalsIgnoreCase("0.0")){
-                            ending2.setText("$ 0.00"
-                            );
+                            ending2.setText("$ 0.00");
                         }
                         else {
                             ending2.setText(formatter.format(s1));

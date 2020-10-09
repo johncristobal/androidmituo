@@ -29,8 +29,8 @@ android {
         applicationId "miituo.com.miituo"
         minSdkVersion 16
         targetSdkVersion 28
-        versionCode 95
-        versionName "8.3"
+        versionCode 96
+        versionName "8.31"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         vectorDrawables.useSupportLibrary = true
         multiDexEnabled true

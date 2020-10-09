@@ -87,7 +87,7 @@ public class ApiClient {
     public String UrlCotiza;
     public String pathPhotos;
     private Context c;
-    public static int ambiente = 1;
+    public static int ambiente = 4;
     //  0->DEV
     //  1->QA
     //  2->Multiasegs
