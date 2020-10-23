@@ -16,4 +16,21 @@
         android:layout_centerVertical="true"
         android:padding="30dp" />
 
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/videoView"
+        android:layout_alignEnd="@+id/videoView"
+        android:layout_alignRight="@+id/videoView"
+        android:layout_alignBottom="@+id/videoView"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone"
+        android:id="@+id/imagetemp"
+        android:src="@drawable/miituo"
+        android:layout_alignParentEnd="true" />
+
 </RelativeLayout>

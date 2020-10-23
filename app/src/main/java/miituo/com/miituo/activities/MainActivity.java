@@ -11,6 +11,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.VideoView;
@@ -88,36 +89,55 @@ public class MainActivity extends BaseActivity {
     }
 
     private void normalStart() {
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
-        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        setContentView(R.layout.activity_main);
-        mVideoView = (VideoView) findViewById(R.id.videoView);
-        String uri = "android.resource://" + getPackageName() + "/" + R.raw.logo_ani_miituo;
-        if (mVideoView != null) {
-            mVideoView.setVideoURI(Uri.parse(uri));
-            mVideoView.setZOrderOnTop(true);
-            mVideoView.requestFocus();
-            mVideoView.start();
-        }
-        TimerTask task = new TimerTask() {
-            @Override
-            public void run() {
-//                startActivity(new Intent(getApplicationContext(),MapsActivity.class));
-                if (sesion.equals("1")) {
-                    Intent i = new Intent(getApplicationContext(), SyncActivity.class);
-                    i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                    finish();
-                    startActivity(i);
-                } else {
-                    Intent i = new Intent(getApplicationContext(), TutorialActivity.class);
-                    i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                    finish();
-                    startActivity(i);
-                }
+        try {
+            requestWindowFeature(Window.FEATURE_NO_TITLE);
+            this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+            setContentView(R.layout.activity_main);
+            mVideoView = (VideoView) findViewById(R.id.videoView);
+            String uri = "android.resource://" + getPackageName() + "/" + R.raw.logo_ani_miituo;
+            if (mVideoView != null) {
+                mVideoView.setVideoURI(Uri.parse(uri));
+                mVideoView.setZOrderOnTop(true);
+                mVideoView.requestFocus();
+                mVideoView.start();
             }
-        };
-        Timer timer = new Timer();
-        timer.schedule(task, SPLASH_SCREEN_DELAY);
+            TimerTask task = new TimerTask() {
+                @Override
+                public void run() {
+//                startActivity(new Intent(getApplicationContext(),MapsActivity.class));
+                    if (sesion.equals("1")) {
+                        Intent i = new Intent(getApplicationContext(), SyncActivity.class);
+                        i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                        finish();
+                        startActivity(i);
+                    } else {
+                        Intent i = new Intent(getApplicationContext(), TutorialActivity.class);
+                        i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                        finish();
+                        startActivity(i);
+                    }
+                }
+            };
+            Timer timer = new Timer();
+            timer.schedule(task, SPLASH_SCREEN_DELAY);
+        }catch (Exception e){
+            e.printStackTrace();
+            ImageView img = findViewById(R.id.imagetemp);
+            mVideoView = (VideoView) findViewById(R.id.videoView);
+            img.setVisibility(View.VISIBLE);
+            mVideoView.setVisibility(View.GONE);
+            if (sesion.equals("1")) {
+                Intent i = new Intent(getApplicationContext(), SyncActivity.class);
+                i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                finish();
+                startActivity(i);
+            } else {
+                Intent i = new Intent(getApplicationContext(), SyncActivity.class);
+                i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                finish();
+                startActivity(i);
+            }
+        }
     }
 
     private void pushStart(String idPush, String tarifa,boolean fromPrincipal) {
