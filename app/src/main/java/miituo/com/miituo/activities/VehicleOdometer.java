@@ -55,6 +55,7 @@ import miituo.com.miituo.R;
 import miituo.com.miituo.api.ApiClient;
 import miituo.com.miituo.data.DBaseMethods;
 import miituo.com.miituo.data.IinfoClient;
+import miituo.com.miituo.data.InfoClient;
 import miituo.com.miituo.data.modelBase;
 import miituo.com.miituo.utils.LogHelper;
 
@@ -66,6 +67,8 @@ import com.google.android.gms.vision.text.TextRecognizer;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
+
+import static miituo.com.miituo.activities.MainActivity.result;
 
 public class VehicleOdometer extends BaseActivity {
 
@@ -134,8 +137,18 @@ public class VehicleOdometer extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_vehicle_odometer);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        tok = IinfoClient.getInfoClientObject().getClient().getToken();
+        //Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        try {
+            tok = IinfoClient.getInfoClientObject().getClient().getToken();
+        }catch (Exception e){
+            final GlobalActivity globalVariable = (GlobalActivity) getApplicationContext();
+            List<InfoClient> polizas = globalVariable.getPolizas();
+            if(polizas.size() > 0) {
+                tok = polizas.get(0).getClient().getToken();
+            }else{
+                Toast.makeText(this, "Sin autorización, intente mas tarde.", Toast.LENGTH_SHORT).show();
+            }
+        }
 
         typeface = Typeface.createFromAsset(getAssets(), "fonts/herne1.ttf");
         TextView leyenda = (TextView)findViewById(R.id.textView40);

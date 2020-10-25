@@ -398,7 +398,7 @@ public class LastOdometerActivity extends AppCompatActivity {
                                     //IinfoClient.getInfoClientObject().getPolicies().setHasOdometerPicture(true);
                                     IinfoClient.getInfoClientObject().getPolicies().setReportState(12);
 
-                                    String rs = UpdateDataBase(modelBase.FeedEntryPoliza.TABLE_NAME,IinfoClient.getInfoClientObject().getPolicies().getNoPolicy());
+                                    //String rs = UpdateDataBase(modelBase.FeedEntryPoliza.TABLE_NAME,IinfoClient.getInfoClientObject().getPolicies().getNoPolicy());
 
                                     Intent i = new Intent(LastOdometerActivity.this, PrincipalActivity.class);
                                     i.putExtra("actualizar","1");
@@ -430,7 +430,7 @@ public class LastOdometerActivity extends AppCompatActivity {
                 LogHelper.sendLog(LastOdometerActivity.this,IinfoClient.getInfoClientObject().getPolicies().getId());
             }
 
-            public String UpdateDataBase(String...strings){
+            /*public String UpdateDataBase(String...strings){
 
                 String val = strings[0];
                 //Log.w("Here",val);
@@ -465,7 +465,7 @@ public class LastOdometerActivity extends AppCompatActivity {
                         break;
                 }
                 return "";
-            }
+            }*/
         };
         sendOdometro.execute();
     }
@@ -543,7 +543,7 @@ public class LastOdometerActivity extends AppCompatActivity {
                                     IinfoClient.getInfoClientObject().getPolicies().setHasOdometerPicture(true);
                                     IinfoClient.getInfoClientObject().getPolicies().setReportState(12);
 
-                                    String rs = UpdateDataBase(modelBase.FeedEntryPoliza.TABLE_NAME,IinfoClient.getInfoClientObject().getPolicies().getNoPolicy());
+                                    //String rs = UpdateDataBase(modelBase.FeedEntryPoliza.TABLE_NAME,IinfoClient.getInfoClientObject().getPolicies().getNoPolicy());
 
                                     Intent i = new Intent(LastOdometerActivity.this, PrincipalActivity.class);
                                     i.putExtra("actualizar","1");
@@ -576,7 +576,7 @@ public class LastOdometerActivity extends AppCompatActivity {
                 LogHelper.sendLog(LastOdometerActivity.this,IinfoClient.getInfoClientObject().getPolicies().getId());
             }
 
-            public String UpdateDataBase(String...strings){
+            /*public String UpdateDataBase(String...strings){
 
                 String val = strings[0];
                 //Log.w("Here",val);
@@ -611,7 +611,7 @@ public class LastOdometerActivity extends AppCompatActivity {
                         break;
                 }
                 return "";
-            }
+            }*/
         };
         sendOdometro.execute();
     }
@@ -1199,7 +1199,7 @@ public class LastOdometerActivity extends AppCompatActivity {
                 }
             }
 
-            public String UpdateDataBase(String...strings){
+            /*public String UpdateDataBase(String...strings){
                 String val = strings[0];
                 //Log.w("Here",val);
 
@@ -1233,7 +1233,7 @@ public class LastOdometerActivity extends AppCompatActivity {
                         break;
                 }
                 return "";
-            }
+            }*/
         };
         sendthelast.execute();
     }

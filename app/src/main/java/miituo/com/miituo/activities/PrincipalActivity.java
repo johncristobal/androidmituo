@@ -203,6 +203,9 @@ public class PrincipalActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
         navigationView.setItemIconTintList(null);
 
+        final GlobalActivity globalVariable = (GlobalActivity) getApplicationContext();
+        result = globalVariable.getPolizas();
+
         TextView cerrar = (TextView) findViewById(R.id.textView62);
         cerrar.setTypeface(typeface);
         TextView cotizar = (TextView) findViewById(R.id.textView16);
@@ -297,17 +300,17 @@ public class PrincipalActivity extends AppCompatActivity
             }
         });
 
-        final GlobalActivity globalVariable = (GlobalActivity) getApplicationContext();
-        result = globalVariable.getPolizas();
-
         if (result != null) {
             vList = (ListView) findViewById(R.id.listviewinfoclient);
             removeInvalidPolicies();
             vadapter = new VehicleModelAdapter(getApplicationContext(), result, typeface, starttime, this);
             vadapter.notifyDataSetChanged();
             vList.setAdapter(vadapter);
-
-            tokencliente = result.get(0).getClient().getToken();
+            if(result.size() > 0) {
+                tokencliente = result.get(0).getClient().getToken();
+            }else{
+                tokencliente = "";
+            }
         }
 
         String act = getIntent().getStringExtra("actualizar");
@@ -826,7 +829,7 @@ public class PrincipalActivity extends AppCompatActivity
             idpoliza = IinfoClient.getInfoClientObject().getPolicies().getId();
 
             //firebase to get tokne....temp for now
-            String token = IinfoClient.getInfoClientObject().getClient().getToken();
+            //String token = IinfoClient.getInfoClientObject().getClient().getToken();
 
             //set token...
             //IinfoClient.getInfoClientObject().getClient().setToken(token);

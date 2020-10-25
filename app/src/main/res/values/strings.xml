@@ -33,7 +33,7 @@
     <string name="title_activity_confirm">ConfirmActivity</string>
     <string name="title_activity_last_odometer">LastOdometerActivity</string>
     <string name="dbversion">25</string>
-    <string name="appversion">version 8.32</string>
+    <string name="appversion">version 8.33</string>
     <string name="title_activity_tuto1">Tuto1Activity</string>
     <string name="title_activity_acerca">AcercaActivity</string>
     <string name="title_activity_aviso">AvisoActivity</string>
@@ -44,8 +44,8 @@
     <string name="tomar_fotograf_a">Tomar fotografía</string>
     <string name="sin_auto">Ya no tengo mi auto</string>
 
-    <string name="tel_atlas">018008493917</string>
-    <string name="tel_ana">018009112627</string>
+    <string name="tel_atlas">8008493917</string>
+    <string name="tel_ana">8009112627</string>
     <string name="tel_gnp">tel gnp</string>
     <string name="siniestro">Reportar Siniestro</string>
 
