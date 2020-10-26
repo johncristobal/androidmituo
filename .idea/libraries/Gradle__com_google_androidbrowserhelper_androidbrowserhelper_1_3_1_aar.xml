@@ -1,11 +1,12 @@
 <component name="libraryTable">
   <library name="Gradle: com.google.androidbrowserhelper:androidbrowserhelper:1.3.1@aar">
     <ANNOTATIONS>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/4cb83dd3522d252c2b3a20b71af7eb49/jetified-androidbrowserhelper-1.3.1/annotations.zip!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/8029a1814e51316b7eedc1f46ffa03c1/jetified-androidbrowserhelper-1.3.1/annotations.zip!/" />
     </ANNOTATIONS>
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/4cb83dd3522d252c2b3a20b71af7eb49/jetified-androidbrowserhelper-1.3.1/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/4cb83dd3522d252c2b3a20b71af7eb49/jetified-androidbrowserhelper-1.3.1/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/8029a1814e51316b7eedc1f46ffa03c1/jetified-androidbrowserhelper-1.3.1/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/8029a1814e51316b7eedc1f46ffa03c1/jetified-androidbrowserhelper-1.3.1/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/8029a1814e51316b7eedc1f46ffa03c1/jetified-androidbrowserhelper-1.3.1/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

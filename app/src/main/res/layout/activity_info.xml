@@ -223,14 +223,15 @@
                 android:gravity="center"
                 android:textSize="16sp" />
         </LinearLayout>
+
         <TextView
             android:id="@+id/lbl4"
-            android:layout_marginTop="10dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/azul_miituo"
-            android:text="01 800 953 0059"
+            android:layout_marginTop="10dp"
             android:gravity="center"
+            android:text="800 953 0059"
+            android:textColor="@color/azul_miituo"
             android:textSize="16sp" />
 
     </LinearLayout>

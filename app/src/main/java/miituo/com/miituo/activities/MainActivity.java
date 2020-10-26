@@ -198,7 +198,7 @@ public class MainActivity extends BaseActivity {
                     lbl4.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Intent intent2 = new Intent(Intent.ACTION_DIAL, Uri.fromParts("tel", "018009530059", null));
+                        Intent intent2 = new Intent(Intent.ACTION_DIAL, Uri.fromParts("tel", "8009530059", null));
                         startActivity(intent2);
                     }
                 });
