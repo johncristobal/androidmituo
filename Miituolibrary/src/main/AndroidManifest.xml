@@ -11,7 +11,9 @@
         android:required="true" />
 
     <application>
-        <activity android:name=".activities.VehiclePictures"></activity>
+        <activity android:name=".activities.VehicleOdometer"></activity>
+        <activity android:name=".activities.PrincipalActivity" />
+        <activity android:name=".activities.VehiclePictures" />
 
         <provider
             android:name="androidx.core.content.FileProvider"
@@ -23,7 +25,5 @@
                 android:resource="@xml/provider_paths" />
         </provider>
     </application>
-
-
 
 </manifest>
