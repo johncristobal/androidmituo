@@ -573,10 +573,14 @@ public class PrincipalActivity extends AppCompatActivity
         public void run() {
             runOnUiThread(new Runnable() {
                 public void run() {
-                    if (viewPager.getCurrentItem() == 0) {
-                        viewPager.setCurrentItem(1, true);
-                    } else {
-                        viewPager.setCurrentItem(0, true);
+                    try {
+                        if (viewPager.getCurrentItem() == 0) {
+                            viewPager.setCurrentItem(1, true);
+                        } else {
+                            viewPager.setCurrentItem(0, true);
+                        }
+                    }catch(Exception e){
+                        e.printStackTrace();
                     }
                 }
             });
@@ -1142,7 +1146,7 @@ public class PrincipalActivity extends AppCompatActivity
                 } else {
                     sinPolizas.setVisibility(View.GONE);
                     imgSinPolizas.setVisibility(View.GONE);
-                    swipeContainer.setVisibility(View.VISIBLE);
+                    //swipeContainer.setVisibility(View.VISIBLE);
                     sinPolizas.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
@@ -1201,8 +1205,17 @@ public class PrincipalActivity extends AppCompatActivity
                         vList = (ListView) findViewById(R.id.listviewinfoclient);
                         removeInvalidPolicies();
                         vadapter = new VehicleModelAdapter(getApplicationContext(), result, typeface, starttime, PrincipalActivity.this);
-                        vList.setAdapter(vadapter);
+
                         vadapter.notifyDataSetChanged();
+                        vList.setAdapter(vadapter);
+                        if(result.size() > 0) {
+                            tokencliente = result.get(0).getClient().getToken();
+                        }else{
+                            tokencliente = "";
+                        }
+
+                        //vList.setAdapter(vadapter);
+                        //vadapter.notifyDataSetChanged();
                         swipeContainer.setRefreshing(false);
                     }
                 }

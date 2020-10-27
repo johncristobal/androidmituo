@@ -49,13 +49,14 @@ public class MainActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        String tokenF = FirebaseInstanceId.getInstance().getToken();
-        print("token: " + tokenF);
+        //String tokenF = FirebaseInstanceId.getInstance().getToken();
+        //print("token: " + tokenF);
 
-        base = new modelBase(getApplicationContext(), Integer.parseInt(getResources().getString(R.string.dbversion)));
-        DBaseMethods.base = base;
-        app_preferences = getSharedPreferences("miituo", Context.MODE_PRIVATE);
-        sesion = app_preferences.getString("sesion", "null");
+        try {
+            base = new modelBase(getApplicationContext(), Integer.parseInt(getResources().getString(R.string.dbversion)));
+            DBaseMethods.base = base;
+            app_preferences = getSharedPreferences("miituo", Context.MODE_PRIVATE);
+            sesion = app_preferences.getString("sesion", "null");
 
 //        ShortcutBadger.applyCount(this,1);
 
@@ -66,26 +67,30 @@ public class MainActivity extends BaseActivity {
 //            return;
 //        }
 
-        Bundle b = getIntent().getExtras();
-        String idPush = null;
-        idPush = b != null ? b.getString("idPush", null) : null;
-        String idPushS = null;
-        idPushS = getIntent().getStringExtra("idPush");
-        print(" idPush: " + idPush + "\nidPushS: " + idPushS);
+            Bundle b = getIntent().getExtras();
+            String idPush = null;
+            idPush = b != null ? b.getString("idPush", null) : null;
+            String idPushS = null;
+            idPushS = getIntent().getStringExtra("idPush");
+            //print(" idPush: " + idPush + "\nidPushS: " + idPushS);
 //        idPush="3";
-        if (idPush != null && !idPush.equalsIgnoreCase("") && (idPush.equalsIgnoreCase("2") || idPush.equalsIgnoreCase("3"))
-                || idPushS != null && !idPushS.equalsIgnoreCase("") && (idPushS.equalsIgnoreCase("2") || idPushS.equalsIgnoreCase("3"))) {
-            if (idPush != null && (!idPush.equalsIgnoreCase(""))) {
-                isNormalStart = false;
-                pushStart(idPush, b.getString("tarifa", null),b.getBoolean("fromPrincipal",false));
+            if (idPush != null && !idPush.equalsIgnoreCase("") && (idPush.equalsIgnoreCase("2") || idPush.equalsIgnoreCase("3"))
+                    || idPushS != null && !idPushS.equalsIgnoreCase("") && (idPushS.equalsIgnoreCase("2") || idPushS.equalsIgnoreCase("3"))) {
+                if (idPush != null && (!idPush.equalsIgnoreCase(""))) {
+                    isNormalStart = false;
+                    pushStart(idPush, b.getString("tarifa", null), b.getBoolean("fromPrincipal", false));
+                } else {
+                    isNormalStart = true;
+                    pushStart(idPushS, getIntent().getStringExtra("tarifa"), getIntent().getBooleanExtra("fromPrincipal", false));
+                }
             } else {
-                isNormalStart = true;
-                pushStart(idPushS, getIntent().getStringExtra("tarifa"),getIntent().getBooleanExtra("fromPrincipal",false));
+                normalStart();
             }
-        } else {
+            startService(new Intent(this, GcmIntentService.class));
+        }catch (Exception e){
+            e.printStackTrace();
             normalStart();
         }
-        startService(new Intent(this, GcmIntentService.class));
     }
 
     private void normalStart() {

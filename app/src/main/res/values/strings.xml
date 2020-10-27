@@ -33,7 +33,7 @@
     <string name="title_activity_confirm">ConfirmActivity</string>
     <string name="title_activity_last_odometer">LastOdometerActivity</string>
     <string name="dbversion">25</string>
-    <string name="appversion">version 8.34</string>
+    <string name="appversion">version 8.36</string>
     <string name="title_activity_tuto1">Tuto1Activity</string>
     <string name="title_activity_acerca">AcercaActivity</string>
     <string name="title_activity_aviso">AvisoActivity</string>
