@@ -234,24 +234,28 @@ public class VehicleOdometer extends BaseActivity {
                 //PERMISO = FRONT_VEHICLE;
                 requestPermissions(new String[]{Manifest.permission.CAMERA}, MY_CAMERA_REQUEST_CODE);
             }else{
-                Intent takepic = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-                if (takepic.resolveActivity(getPackageManager()) != null) {
-                    // Create the File where the photo should go
-                    try {
-                        photoFile = createImageFile();
-                    } catch (IOException ex) {
-                        // Error occurred while creating the File...
-                        showAlertaFoto();
-                    }
-                    // Continue only if the File was successfully created
-                    if (photoFile != null) {
-                        Uri photoURI = FileProvider.getUriForFile(VehicleOdometer.this, "miituo.com.miituo.provider", photoFile);
-                        //Uri photoURI = Uri.fromFile(photoFile);
-                        takepic.putExtra(MediaStore.EXTRA_OUTPUT, photoURI);
-                        startActivityForResult(takepic, ODOMETER);
+                if(checkSelfPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED){
+                    requestPermissions(new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 1009);
+                }else {
+                    Intent takepic = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+                    if (takepic.resolveActivity(getPackageManager()) != null) {
+                        // Create the File where the photo should go
+                        try {
+                            photoFile = createImageFile();
+                        } catch (IOException ex) {
+                            // Error occurred while creating the File...
+                            showAlertaFoto();
+                        }
+                        // Continue only if the File was successfully created
+                        if (photoFile != null) {
+                            Uri photoURI = FileProvider.getUriForFile(VehicleOdometer.this, "miituo.com.miituo.provider", photoFile);
+                            //Uri photoURI = Uri.fromFile(photoFile);
+                            takepic.putExtra(MediaStore.EXTRA_OUTPUT, photoURI);
+                            startActivityForResult(takepic, ODOMETER);
 //                        Intent i= new Intent(this,CamActivity.class);
 //                        i.putExtra("img",photoFile);
 //                        startActivityForResult(i,ODOMETER);
+                        }
                     }
                 }
             }

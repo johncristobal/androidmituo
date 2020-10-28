@@ -88,37 +88,37 @@ public class VehiclePictures extends AppCompatActivity {
     public void tomarfoto(int p,String name, boolean isupper23){
 
         Intent takepic=new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-        try {
-            startActivityForResult(takepic, MY_CAMERA_REQUEST_CODE);
-        }catch (Exception ex) {
-            ex.printStackTrace();
-            // Error occurred while creating the File...
-        }
-        //startActivityForResult(i, FRONT_VEHICLE);
-//        if (takepic.resolveActivity(getPackageManager()) != null) {
-//            // Create the File where the photo should go
-//            try {
-//                photoFile = createImageFile(name,p);
-//            } catch (IOException ex) {
-//                ex.printStackTrace();
-//                // Error occurred while creating the File...
-//            }
-//            // Continue only if the File was successfully created
-//            if (photoFile != null) {
-//                Uri photoURI;
-//                photoURI = FileProvider.getUriForFile(VehiclePictures.this, "com.miituo.miituolibrary.provider", photoFile);
-////                if(isupper23) {
-////                    photoURI = FileProvider.getUriForFile(VehiclePictures.this, "com.miituo.miituolibrary.provider", photoFile);
-////                }
-////                else{
-////                    photoURI = Uri.fromFile(photoFile);
-////                }
-//                takepic.putExtra(MediaStore.EXTRA_OUTPUT, photoURI);
-//                startActivityForResult(takepic, p);
-//            }else{
-//                Toast.makeText(this,"Tuvimos un problema al tomar la imagen. Intente mas tarde.",Toast.LENGTH_SHORT).show();
-//            }
+//        try {
+//            startActivityForResult(takepic, MY_CAMERA_REQUEST_CODE);
+//        }catch (Exception ex) {
+//            ex.printStackTrace();
+//            // Error occurred while creating the File...
 //        }
+//        startActivityForResult(i, FRONT_VEHICLE);
+        if (takepic.resolveActivity(getPackageManager()) != null) {
+            // Create the File where the photo should go
+            try {
+                photoFile = createImageFile(name,p);
+            } catch (IOException ex) {
+                ex.printStackTrace();
+                // Error occurred while creating the File...
+            }
+            // Continue only if the File was successfully created
+            if (photoFile != null) {
+                Uri photoURI;
+                photoURI = FileProvider.getUriForFile(VehiclePictures.this, "com.miituo.miituolibrary.provider", photoFile);
+//                if(isupper23) {
+//                    photoURI = FileProvider.getUriForFile(VehiclePictures.this, "com.miituo.miituolibrary.provider", photoFile);
+//                }
+//                else{
+//                    photoURI = Uri.fromFile(photoFile);
+//                }
+                takepic.putExtra(MediaStore.EXTRA_OUTPUT, photoURI);
+                startActivityForResult(takepic, p);
+            }else{
+                Toast.makeText(this,"Tuvimos un problema al tomar la imagen. Intente mas tarde.",Toast.LENGTH_SHORT).show();
+            }
+        }
     }
 
     private File createImageFile(String username, int tag) throws IOException {
@@ -155,13 +155,13 @@ public class VehiclePictures extends AppCompatActivity {
             {
                 Bundle extras = data.getExtras();
                 Bitmap imageBitmap = (Bitmap) extras.get("data");
-//                Glide.with(VehiclePictures.this)
-//                            .load(imageBitmap)
-//                            //.apply(new RequestOptions().override(150, 200).centerCrop())//.override(150,200)
-//                            //.override(150,200)
-//                            //.centerCrop()
-//                            .into(Img1);
-                Img1.setImageBitmap(imageBitmap);
+                Glide.with(VehiclePictures.this)
+                            .load(imageBitmap)
+                            .apply(new RequestOptions().override(150, 200).centerCrop())//.override(150,200)
+                            //.override(150,200)
+                            //.centerCrop()
+                            .into(Img1);
+                //Img1.setImageBitmap(imageBitmap);
 //                String user = "";
 //                String picName="";
 //                switch (requestCode){
