@@ -41,11 +41,11 @@ public class VehicleModelAdapter extends BaseAdapter {
 
     public String pathPhotos;
 
-    public VehicleModelAdapter(Context mContext, List<InfoClient> mInfoClientList, Typeface t, long tie, CallBack callBack) {
+    public VehicleModelAdapter(Context mContext, List<InfoClient> mInfoClientList, long tie, CallBack callBack) {
         this.mContext = mContext;
         this.mInfoClientList = mInfoClientList;
         this.callBack=callBack;
-        tipo = t;
+        //tipo = t;
         this.time = tie;
         pathPhotos = new ApiClient(this.mContext).pathPhotos;
     }
@@ -78,9 +78,9 @@ public class VehicleModelAdapter extends BaseAdapter {
         LinearLayout btnRenovacion=(LinearLayout) v.findViewById(R.id.btnRenovacion);
         ImageView btnSiniestro=(ImageView)v.findViewById(R.id.btnSiniestro);
         ImageView imagen = (ImageView)v.findViewById(R.id.profile_image);
-        TxtNoPolicy.setTypeface(tipo,Typeface.BOLD);
-        TxtInfo.setTypeface(tipo,Typeface.BOLD);
-        TxtMensajeLimite.setTypeface(tipo);
+        //TxtNoPolicy.setTypeface(tipo,Typeface.BOLD);
+        //TxtInfo.setTypeface(tipo,Typeface.BOLD);
+        //TxtMensajeLimite.setTypeface(tipo);
 
         if(imagen != null){
             //pintaImg(imagen,position);
@@ -102,9 +102,9 @@ public class VehicleModelAdapter extends BaseAdapter {
         if(mInfoClientList.get(position).getPolicies().getMensualidad()==11){
             btnRenovacion.setVisibility(View.VISIBLE);
             lbRenovacion1.setTextColor(Color.RED);
-            lbRenovacion1.setTypeface(tipo,Typeface.BOLD);
+            //lbRenovacion1.setTypeface(tipo,Typeface.BOLD);
             lbRenovacion2.setTextColor(Color.RED);
-            lbRenovacion2.setTypeface(tipo);
+            //lbRenovacion2.setTypeface(tipo);
             btnRenovacion.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -306,7 +306,7 @@ public class VehicleModelAdapter extends BaseAdapter {
         return v;
     }
 
-    private void pintaImg(ImageView iv, int id) {
+    private void pintaImg(final ImageView iv, int id) {
         //ruta del archivo...https://filesdev.miituo.com/21/FROM_VEHICLE.png
 
         Glide.with(mContext).asBitmap().

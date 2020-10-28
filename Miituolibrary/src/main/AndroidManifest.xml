@@ -11,11 +11,11 @@
         android:required="true" />
 
     <application>
-        <activity android:name=".activities.VehicleOdometer"></activity>
+        <activity android:name=".activities.VehicleOdometer"/>
         <activity android:name=".activities.PrincipalActivity" />
         <activity android:name=".activities.VehiclePictures" />
 
-        <provider
+        <!--<provider
             android:name="androidx.core.content.FileProvider"
             android:authorities="com.miituo.miituolibrary.provider"
             android:exported="false"
@@ -23,7 +23,7 @@
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/provider_paths" />
-        </provider>
+        </provider>-->
     </application>
 
 </manifest>
