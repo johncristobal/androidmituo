@@ -141,12 +141,17 @@ public class VehicleOdometer extends BaseActivity {
         try {
             tok = IinfoClient.getInfoClientObject().getClient().getToken();
         }catch (Exception e){
-            final GlobalActivity globalVariable = (GlobalActivity) getApplicationContext();
-            List<InfoClient> polizas = globalVariable.getPolizas();
-            if(polizas.size() > 0) {
-                tok = polizas.get(0).getClient().getToken();
-            }else{
-                Toast.makeText(this, "Sin autorización, intente mas tarde.", Toast.LENGTH_SHORT).show();
+            try {
+                final GlobalActivity globalVariable = (GlobalActivity) getApplicationContext();
+                List<InfoClient> polizas = globalVariable.getPolizas();
+                if (polizas.size() > 0) {
+                    tok = polizas.get(0).getClient().getToken();
+                } else {
+                    Toast.makeText(this, "Sin autorización, intente mas tarde.", Toast.LENGTH_SHORT).show();
+                }
+            }catch(Exception ee){
+                Toast.makeText(this, "Tenemos un problema para leer la información. Favor de contactar a miituo para mayor información.", Toast.LENGTH_SHORT).show();
+                finish();
             }
         }
 

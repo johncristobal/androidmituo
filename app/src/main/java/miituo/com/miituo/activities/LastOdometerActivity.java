@@ -1058,31 +1058,49 @@ public class LastOdometerActivity extends AppCompatActivity {
 
             @Override
             protected void onCancelled() {
-                LogHelper.log(LastOdometerActivity.this,LogHelper.backTask,"LastOdometerActivity.sayGoodBye.onCancelled","errorCode: "+ErrorCode,"",
-                        "","id:"+IinfoClient.getInfoClientObject().getPolicies().getId(),"");
-                progress.dismiss();
-                //Toast msg = Toast.makeText(getApplicationContext(), ErrorCode, Toast.LENGTH_LONG);
-                //msg.show();
+                try {
+                    LogHelper.log(LastOdometerActivity.this, LogHelper.backTask, "LastOdometerActivity.sayGoodBye.onCancelled", "errorCode: " + ErrorCode, "",
+                            "", "id:" + IinfoClient.getInfoClientObject().getPolicies().getId(), "");
+                    progress.dismiss();
+                    //Toast msg = Toast.makeText(getApplicationContext(), ErrorCode, Toast.LENGTH_LONG);
+                    //msg.show();
 
-                new android.app.AlertDialog.Builder(LastOdometerActivity.this)
-                        .setTitle("Atención usuario...")
-                        .setMessage(ErrorCode)
-                        //.setIcon(R.drawable.miituo)
-                        .setCancelable(false)
-                        .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
-                                //progresslast.dismiss();
-                                Intent i = new Intent(LastOdometerActivity.this, PrincipalActivity.class);
-                                i.putExtra("actualizar","1");
-                                startActivity(i);
-                            }
-                        })
-                        .show();
+                    new android.app.AlertDialog.Builder(LastOdometerActivity.this)
+                            .setTitle("Atención usuario...")
+                            .setMessage(ErrorCode)
+                            //.setIcon(R.drawable.miituo)
+                            .setCancelable(false)
+                            .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    //progresslast.dismiss();
+                                    Intent i = new Intent(LastOdometerActivity.this, PrincipalActivity.class);
+                                    i.putExtra("actualizar", "1");
+                                    startActivity(i);
+                                }
+                            })
+                            .show();
 
-                super.onCancelled();
+                    super.onCancelled();
 
-                LogHelper.sendLog(LastOdometerActivity.this,IinfoClient.getInfoClientObject().getPolicies().getId());
+                    LogHelper.sendLog(LastOdometerActivity.this, IinfoClient.getInfoClientObject().getPolicies().getId());
+                }catch(Exception e){
+                    new android.app.AlertDialog.Builder(LastOdometerActivity.this)
+                            .setTitle("Atención usuario...")
+                            .setMessage("Tuvimos un problema, intente más tarde.")
+                            //.setIcon(R.drawable.miituo)
+                            .setCancelable(false)
+                            .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    //progresslast.dismiss();
+                                    Intent i = new Intent(LastOdometerActivity.this, PrincipalActivity.class);
+                                    i.putExtra("actualizar", "1");
+                                    startActivity(i);
+                                }
+                            })
+                            .show();
+                }
             }
 
             @Override

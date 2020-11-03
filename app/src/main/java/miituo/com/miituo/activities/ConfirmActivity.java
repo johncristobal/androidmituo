@@ -31,7 +31,7 @@ public class ConfirmActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_confirm);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        //Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         //toolbar.setTitle("Odómetro");
         //toolbar.setTitleTextColor(Color.BLACK);
         //setSupportActionBar(toolbar);
@@ -60,27 +60,6 @@ public class ConfirmActivity extends AppCompatActivity {
         leyenda2.setTypeface(typeface);
         res.setTypeface(typeface);
 
-        int a = IinfoClient.InfoClientObject.getPolicies().getLastOdometer();
-
-        if(a == 0){
-            RelativeLayout ultimo = (RelativeLayout)findViewById(R.id.relativeLayout5);
-            ultimo.setVisibility(View.GONE);
-
-            //RelativeLayout ahora = (RelativeLayout)findViewById(R.id.relativeLayout4);
-        }else{
-            editlast.setText(a+"");
-            editlast.setEnabled(false);
-        }
-
-        ImageButton back = (ImageButton)findViewById(R.id.imageView12);
-        back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i=new Intent(ConfirmActivity.this,PrincipalActivity.class);
-                startActivity(i);
-            }
-        });
-
         //get image and how into imageview here
         Typeface typefacebold = Typeface.createFromAsset(getAssets(), "fonts/herne.ttf");
         TextView titulo = (TextView)findViewById(R.id.textView27);
@@ -98,6 +77,30 @@ public class ConfirmActivity extends AppCompatActivity {
         ImageView vistaodo = findViewById(R.id.imageView17);
         vistaodo.setImageBitmap(bmp);
 
+        ImageButton back = (ImageButton)findViewById(R.id.imageView12);
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i=new Intent(ConfirmActivity.this,PrincipalActivity.class);
+                startActivity(i);
+            }
+        });
+
+        try {
+            int a = IinfoClient.InfoClientObject.getPolicies().getLastOdometer();
+
+            if (a == 0) {
+                RelativeLayout ultimo = (RelativeLayout) findViewById(R.id.relativeLayout5);
+                ultimo.setVisibility(View.GONE);
+
+                //RelativeLayout ahora = (RelativeLayout)findViewById(R.id.relativeLayout4);
+            } else {
+                editlast.setText(a + "");
+                editlast.setEnabled(false);
+            }
+        }catch(Exception e){
+            e.printStackTrace();
+        }
     }
 
     public void validar(View v){
