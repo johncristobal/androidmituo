@@ -1,12 +1,14 @@
 package com.miituo.miituolibrary.activities;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.FileProvider;
 
 import android.Manifest;
 import android.app.Activity;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
@@ -41,6 +43,9 @@ public class VehiclePictures extends AppCompatActivity {
     final int SIDE_LEFT_VEHICLE=4;
     public File photoFile = null;
     String currentPhotoPath;
+    boolean IsTaken =false;
+    public boolean flag1,flag2,flag3,flag4;
+    public boolean flag1valida,flag2valida,flag3valida,flag4valida;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -85,40 +90,103 @@ public class VehiclePictures extends AppCompatActivity {
         }
     }
 
-    public void tomarfoto(int p,String name, boolean isupper23){
-
-        Intent takepic=new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-//        try {
-//            startActivityForResult(takepic, MY_CAMERA_REQUEST_CODE);
-//        }catch (Exception ex) {
-//            ex.printStackTrace();
-//            // Error occurred while creating the File...
-//        }
-//        startActivityForResult(i, FRONT_VEHICLE);
-        if (takepic.resolveActivity(getPackageManager()) != null) {
-            // Create the File where the photo should go
-            try {
-                photoFile = createImageFile(name,p);
-            } catch (IOException ex) {
-                ex.printStackTrace();
-                // Error occurred while creating the File...
+    public void showAlertaFoto(){
+        AlertDialog.Builder builder = new AlertDialog.Builder(VehiclePictures.this);
+        builder.setTitle("Atención");
+        builder.setMessage("No podemos abrir tu cámara. Revisa el dispositivo.");
+        builder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                Intent i=new Intent(VehiclePictures.this,PrincipalActivity.class);
+                startActivity(i);
             }
-            // Continue only if the File was successfully created
-            if (photoFile != null) {
-                Uri photoURI;
-                photoURI = FileProvider.getUriForFile(VehiclePictures.this, "com.miituo.miituolibrary.provider", photoFile);
-//                if(isupper23) {
-//                    photoURI = FileProvider.getUriForFile(VehiclePictures.this, "com.miituo.miituolibrary.provider", photoFile);
-//                }
-//                else{
-//                    photoURI = Uri.fromFile(photoFile);
-//                }
-                takepic.putExtra(MediaStore.EXTRA_OUTPUT, photoURI);
-                startActivityForResult(takepic, p);
+        });
+
+        AlertDialog alerta = builder.create();
+        alerta.show();
+    }
+
+    public void tomarfoto(int p,String name, boolean isupper23){
+        if (Build.VERSION.SDK_INT < 23) {
+            Intent takepic = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+            if (takepic.resolveActivity(getPackageManager()) != null) {
+                // Create the File where the photo should go
+                try {
+                    photoFile = createImageFile(name,p);
+                } catch (IOException ex) {
+                    // Error occurred while creating the File...
+                    showAlertaFoto();
+                }
+                // Continue only if the File was successfully created
+                if (photoFile != null) {
+                    //Uri photoURI = FileProvider.getUriForFile(VehicleOdometer.this, "miituo.com.miituo.provider", photoFile);
+                    Uri photoURI = Uri.fromFile(photoFile);
+                    takepic.putExtra(MediaStore.EXTRA_OUTPUT, photoURI);
+                    startActivityForResult(takepic, p);
+//                    Intent i= new Intent(this,CamActivity.class);
+//                    i.putExtra("img",photoFile);
+//                    startActivityForResult(i,ODOMETER);
+                }
+            }
+        }else{
+            if (checkSelfPermission(Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
+                //PERMISO = FRONT_VEHICLE;
+                requestPermissions(new String[]{Manifest.permission.CAMERA}, MY_CAMERA_REQUEST_CODE);
             }else{
-                Toast.makeText(this,"Tuvimos un problema al tomar la imagen. Intente mas tarde.",Toast.LENGTH_SHORT).show();
+                Intent takepic = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+                if (takepic.resolveActivity(getPackageManager()) != null) {
+                    // Create the File where the photo should go
+                    try {
+                        photoFile = createImageFile(name,p);
+                    } catch (IOException ex) {
+                        // Error occurred while creating the File...
+                        showAlertaFoto();
+                    }
+                    // Continue only if the File was successfully created
+                    if (photoFile != null) {
+                        Uri photoURI = FileProvider.getUriForFile(VehiclePictures.this, "com.miituo.miituolibrary.provider", photoFile);
+                        //Uri photoURI = Uri.fromFile(photoFile);
+                        takepic.putExtra(MediaStore.EXTRA_OUTPUT, photoURI);
+                        startActivityForResult(takepic, p);
+//                        Intent i= new Intent(this,CamActivity.class);
+//                        i.putExtra("img",photoFile);
+//                        startActivityForResult(i,ODOMETER);
+                    }
+                }
             }
         }
+//        Intent takepic=new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+////        try {
+////            startActivityForResult(takepic, MY_CAMERA_REQUEST_CODE);
+////        }catch (Exception ex) {
+////            ex.printStackTrace();
+////            // Error occurred while creating the File...
+////        }
+////        startActivityForResult(i, FRONT_VEHICLE);
+//        if (takepic.resolveActivity(getPackageManager()) != null) {
+//            // Create the File where the photo should go
+//            try {
+//                photoFile = createImageFile(name,p);
+//            } catch (IOException ex) {
+//                ex.printStackTrace();
+//                // Error occurred while creating the File...
+//            }
+//            // Continue only if the File was successfully created
+//            if (photoFile != null) {
+//                Uri photoURI;
+//                photoURI = FileProvider.getUriForFile(VehiclePictures.this, "com.miituo.miituolibrary.provider", photoFile);
+////                if(isupper23) {
+////                    photoURI = FileProvider.getUriForFile(VehiclePictures.this, "com.miituo.miituolibrary.provider", photoFile);
+////                }
+////                else{
+////                    photoURI = Uri.fromFile(photoFile);
+////                }
+//                takepic.putExtra(MediaStore.EXTRA_OUTPUT, photoURI);
+//                startActivityForResult(takepic, p);
+//            }else{
+//                Toast.makeText(this,"Tuvimos un problema al tomar la imagen. Intente mas tarde.",Toast.LENGTH_SHORT).show();
+//            }
+//        }
     }
 
     private File createImageFile(String username, int tag) throws IOException {
@@ -153,106 +221,107 @@ public class VehiclePictures extends AppCompatActivity {
             super.onActivityResult(requestCode, resultCode, data);
             if(resultCode== Activity.RESULT_OK)
             {
-                Bundle extras = data.getExtras();
-                Bitmap imageBitmap = (Bitmap) extras.get("data");
-                Glide.with(VehiclePictures.this)
-                            .load(imageBitmap)
-                            .apply(new RequestOptions().override(150, 200).centerCrop())//.override(150,200)
-                            //.override(150,200)
-                            //.centerCrop()
-                            .into(Img1);
-                //Img1.setImageBitmap(imageBitmap);
-//                String user = "";
-//                String picName="";
-//                switch (requestCode){
-//                    case 1:
-//                        user = "frontal";
-//                        picName="Frontal";
-//                        break;
-//                    case 2:
-//                        user = "derecho";
-//                        picName="Lateral Derecho";
-//                        break;
-//                    case 3:
-//                        user = "back";
-//                        picName="Trasera";
-//                        break;
-//                    case 4:
-//                        user = "izquierdo";
-//                        picName="Lateral Izquierdo";
-//                        break;
-//                    default:
-//                        break;
-//                }
-//
-//                String filePath = currentPhotoPath;
-//
-//                if (requestCode == 1) {
-//                    //flag1 = true;
-//                    //comprimer imagen antes de lanzarla al imageview
-//                    //bmp.compress(Bitmap.CompressFormat.JPEG,15);
-//
-//                    //Img1.setImageBitmap(resizedtoshow);
-//                    Glide.with(VehiclePictures.this)
-//                            .load(filePath)
+
+//                Bundle extras = data.getExtras();
+//                Bitmap imageBitmap = (Bitmap) extras.get("data");
+//                Glide.with(VehiclePictures.this)
+//                            .load(imageBitmap)
 //                            .apply(new RequestOptions().override(150, 200).centerCrop())//.override(150,200)
 //                            //.override(150,200)
 //                            //.centerCrop()
 //                            .into(Img1);
-//                    //Img1.setImageBitmap(bmp);
-//                }
-//                if (requestCode == 2) {
-//                    flag2 = true;
-//                    //Bundle ext=data.getExtras();
-//                    //bmp=(Bitmap)ext.get("data");
-//                    //Img2.setImageBitmap(resizedtoshow);
-//                    //Img2.setImageBitmap(bmp);
-//                    Glide.with(VehiclePictures.this)
-//                            .load(filePath)
-//                            .apply(new RequestOptions().override(150, 200).centerCrop())//.override(150,200)
-//                            //.override(150,200)
-//                            //.centerCrop()
-//                            .into(Img2);
-//                }
-//                if (requestCode == 3) {
-//                    flag3 = true;
-//                    //Bundle ext=data.getExtras();
-//                    //bmp=(Bitmap)ext.get("data");
-//                    //Img3.setImageBitmap(resizedtoshow);
-//                    //Img3.setImageBitmap(bmp);
-//                    Glide.with(VehiclePictures.this)
-//                            .load(filePath)
-//                            .apply(new RequestOptions().override(150, 200).centerCrop())//.override(150,200)
-//                            //.override(150,200)
-//                            //.centerCrop()
-//                            .into(Img3);
-//                }
-//                if (requestCode == 4) {
-//                    flag4 = true;
-//                    //Bundle ext=data.getExtras();
-//                    //bmp=(Bitmap)ext.get("data");
-//                    //Img4.setImageBitmap(resizedtoshow);
-//                    //Img4.setImageBitmap(bmp);
-//                    Glide.with(VehiclePictures.this)
-//                            .load(filePath)
-//                            .apply(new RequestOptions().override(150, 200).centerCrop())//.override(150,200)
-//                            // .override(150,200)
-//                            //.centerCrop()
-//                            .into(Img4);
-//                }
-//                if (requestCode == 5) {
-//                    //Bundle ext=data.getExtras();
-//                    //bmp=(Bitmap)ext.get("data");
-//                    //Img5.setImageBitmap(resizedtoshow);
-//                    //Img5.setImageBitmap(bmp);
-//                    Glide.with(VehiclePictures.this)
-//                            .load(filePath)
-//                            .apply(new RequestOptions().override(150, 200).centerCrop())//.override(150,200)
-//                            //.override(150,200)
-//                            //.centerCrop()
-//                            .into(Img5);
-//                }
-//                IsTaken = true;
+                //Img1.setImageBitmap(imageBitmap);
+                String user = "";
+                String picName="";
+                switch (requestCode){
+                    case 1:
+                        user = "frontal";
+                        picName="Frontal";
+                        break;
+                    case 2:
+                        user = "derecho";
+                        picName="Lateral Derecho";
+                        break;
+                    case 3:
+                        user = "back";
+                        picName="Trasera";
+                        break;
+                    case 4:
+                        user = "izquierdo";
+                        picName="Lateral Izquierdo";
+                        break;
+                    default:
+                        break;
+                }
+
+                String filePath = currentPhotoPath;
+
+                if (requestCode == 1) {
+                    //flag1 = true;
+                    //comprimer imagen antes de lanzarla al imageview
+                    //bmp.compress(Bitmap.CompressFormat.JPEG,15);
+                    //Img5.setImageBitmap(bmp);
+                    //Img1.setImageBitmap(resizedtoshow);
+                    Glide.with(VehiclePictures.this)
+                            .load(filePath)
+                            .apply(new RequestOptions().override(150, 200).centerCrop())//.override(150,200)
+                            //.override(150,200)
+                            //.centerCrop()
+                            .into(Img1);
+                    //Img1.setImageBitmap(bmp);
+                }
+                if (requestCode == 2) {
+                    flag2 = true;
+                    //Bundle ext=data.getExtras();
+                    //bmp=(Bitmap)ext.get("data");
+                    //Img2.setImageBitmap(resizedtoshow);
+                    //Img2.setImageBitmap(bmp);
+                    Glide.with(VehiclePictures.this)
+                            .load(filePath)
+                            .apply(new RequestOptions().override(150, 200).centerCrop())//.override(150,200)
+                            //.override(150,200)
+                            //.centerCrop()
+                            .into(Img2);
+                }
+                if (requestCode == 3) {
+                    flag3 = true;
+                    //Bundle ext=data.getExtras();
+                    //bmp=(Bitmap)ext.get("data");
+                    //Img3.setImageBitmap(resizedtoshow);
+                    //Img3.setImageBitmap(bmp);
+                    Glide.with(VehiclePictures.this)
+                            .load(filePath)
+                            .apply(new RequestOptions().override(150, 200).centerCrop())//.override(150,200)
+                            //.override(150,200)
+                            //.centerCrop()
+                            .into(Img3);
+                }
+                if (requestCode == 4) {
+                    flag4 = true;
+                    //Bundle ext=data.getExtras();
+                    //bmp=(Bitmap)ext.get("data");
+                    //Img4.setImageBitmap(resizedtoshow);
+                    //Img4.setImageBitmap(bmp);
+                    Glide.with(VehiclePictures.this)
+                            .load(filePath)
+                            .apply(new RequestOptions().override(150, 200).centerCrop())//.override(150,200)
+                            // .override(150,200)
+                            //.centerCrop()
+                            .into(Img4);
+                }
+                if (requestCode == 5) {
+                    //Bundle ext=data.getExtras();
+                    //bmp=(Bitmap)ext.get("data");
+                    //Img5.setImageBitmap(resizedtoshow);
+                    //Img5.setImageBitmap(bmp);
+                    Glide.with(VehiclePictures.this)
+                            .load(filePath)
+                            .apply(new RequestOptions().override(150, 200).centerCrop())//.override(150,200)
+                            //.override(150,200)
+                            //.centerCrop()
+                            .into(Img5);
+                }
+                IsTaken = true;
             }
         }
         catch(Exception e){

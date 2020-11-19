@@ -172,14 +172,14 @@ public class PrincipalActivity extends AppCompatActivity implements CallBack {
 //                getfotosFaltantes fotos = new getfotosFaltantes();
 //                fotos.execute();
 //            }
-//            else {
-//                if (item.getPolicies().getState().getId() == 15) {
-//                    i = new Intent(PrincipalActivity.this, InfoCancelActivity.class);
-//                } else {
-//                    i = new Intent(PrincipalActivity.this, DetallesActivity.class);
-//                }
-//                startActivity(i);
-//            }
+            else {
+                if (item.getPolicies().getState().getId() == 15) {
+                    i = new Intent(PrincipalActivity.this, InfoCancelActivity.class);
+                } else {
+                    i = new Intent(PrincipalActivity.this, DetallesActivity.class);
+                }
+                startActivity(i);
+            }
         }
     }
 

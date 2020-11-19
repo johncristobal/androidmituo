@@ -3,21 +3,31 @@ package com.miituo.miituolibrary.activities;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 import androidx.core.content.FileProvider;
 
 import android.Manifest;
 import android.app.Activity;
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.location.Criteria;
+import android.location.Location;
+import android.location.LocationManager;
+import android.media.ExifInterface;
 import android.net.Uri;
+import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
+import android.text.Html;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -32,6 +42,7 @@ import com.miituo.miituolibrary.activities.data.IinfoClient;
 import com.miituo.miituolibrary.activities.data.InfoClient;
 
 import org.json.JSONArray;
+import org.json.JSONObject;
 
 import java.io.File;
 import java.io.IOException;
@@ -49,11 +60,19 @@ public class VehicleOdometer extends AppCompatActivity {
     final String ApiSendReportCancelation ="ReportOdometer/PreviewSaveReport/";
     private ApiClient api;
     private static final int MY_CAMERA_REQUEST_CODE = 100;
+    private Button btn6;
+    public boolean flagodo = false;
 
     public File photoFile = null;
     final int ODOMETER=5,CANCEL=9;
+    public sendOdometro sendodo;
 
     ImageView Img5;
+    SharedPreferences app_preferences;
+    public String tipoodometro;
+    boolean IsTaken =false;
+    Bitmap bmp;
+    public static String odo="";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -91,7 +110,7 @@ public class VehicleOdometer extends AppCompatActivity {
         //edit2 = (EditText)findViewById(R.id.editText2);
 
         Img5=(ImageView)findViewById(R.id.img5);
-        Button btn6=(Button)findViewById(R.id.btn6);
+        btn6=(Button)findViewById(R.id.btn6);
         /*btn6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -181,6 +200,20 @@ public class VehicleOdometer extends AppCompatActivity {
         }
     }
 
+    public void subirFoto(View v){
+        if (btn6.getText().toString().contains("omar")){
+            tomarFotografia();
+        }else {
+            if (flagodo) {
+                sendodo = new sendOdometro();
+                sendodo.execute("OK");
+            } else {
+                Toast msg = Toast.makeText(getApplicationContext(), "Tome la foto del odómetro para finalizar", Toast.LENGTH_LONG);
+                msg.show();
+            }
+        }
+    }
+
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         try {
@@ -188,7 +221,7 @@ public class VehicleOdometer extends AppCompatActivity {
             if(resultCode== Activity.RESULT_OK)
             {
                 String filePath = mCurrentPhotoPath;
-                //flagodo = true;
+                flagodo = true;
                 //Img5.setImageBitmap(bmp);
                 Glide.with(VehicleOdometer.this)
                         .load(filePath)
@@ -344,6 +377,241 @@ public class VehicleOdometer extends AppCompatActivity {
         }catch(Exception e){
             e.printStackTrace();
             return null;
+        }
+    }
+
+    public void sinAuto(View v){
+        new getCobroTask().execute(false);
+    }
+//*******************************************not attribute =! class*********************************
+    public class sendOdometro extends AsyncTask<String, Void, Void> {
+        ProgressDialog progress = new ProgressDialog(VehicleOdometer.this);
+        String ErrorCode = "";
+        String isFoto = "OK";
+
+        public void showAlerta() {
+            AlertDialog.Builder builder = new AlertDialog.Builder(VehicleOdometer.this);
+            builder.setTitle("Atención");
+            builder.setMessage("Hubo un problema. Lo intentaremos más tarde.");
+            builder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    Intent i = new Intent(VehicleOdometer.this, ConfirmActivity.class);
+                    startActivity(i);
+                }
+            });
+
+            AlertDialog alerta = builder.create();
+            alerta.show();
+        }
+
+        @Override
+        protected void onPreExecute() {
+            try {
+                progress.setTitle("Registro de odómetro");
+                progress.setMessage("Subiendo imagen...");
+                //progress.setIcon(R.drawable.miituo);
+                progress.setCancelable(false);
+                progress.setIndeterminate(true);
+                progress.show();
+            } catch (Exception e) {
+                showAlerta();
+            }
+        }
+
+        @Override
+        protected Void doInBackground(String... params) {
+            try {
+                app_preferences = getSharedPreferences(getString(R.string.shared_name_prefs), Context.MODE_PRIVATE);
+                tipoodometro = app_preferences.getString("odometro", "null");
+                isFoto = params[0];
+                if (isFoto.equals("NO")) {
+                    bmp = BitmapFactory.decodeResource(VehicleOdometer.this.getResources(), R.drawable.ayuda);
+                    //api.UploadPhoto(6, ImageList.get(0).getImage(), UrlApi);
+                    api.UploadPhoto(6, bmp, UrlApi, tok, "", "0", "0", "");
+                } else {
+                    //Subimos foto de odometro.....
+                    mCurrentPhotoPath = app_preferences.getString("nombrefotoodometro", "null");
+                    BitmapFactory.Options options = new BitmapFactory.Options();
+                    options.inSampleSize = 4;
+                    bmp = BitmapFactory.decodeFile(mCurrentPhotoPath, options);
+                    String lat = null, lon = null, cp = null;
+                    api.UploadPhoto((tipoodometro.equals("cancela") ? 6 : 5), bmp, UrlApi, tok, odo, lat, lon, cp);
+                }
+                IinfoClient.InfoClientObject.getPolicies().setRegOdometer(Integer.parseInt("1000"));
+            } catch (IOException ex) {
+                ErrorCode = ex.getMessage();
+                this.cancel(true);
+            }
+            return null;
+        }
+
+        @Override
+        protected void onPostExecute(Void aVoid) {
+
+            try {
+                progress.dismiss();
+                if(isFoto.equals("NO")){
+                    new getCobroTask().execute(true);
+                }
+                else {
+                    Intent i = new Intent(VehicleOdometer.this, ConfirmActivity.class);
+                    startActivity(i);
+                }
+            }
+            catch (Exception e){
+                showAlerta();
+            }
+        }
+
+        @Override
+        protected void onCancelled() {
+            try {
+                progress.dismiss();
+                if (ErrorCode.equals("1000")) {
+                    Intent i = new Intent(VehicleOdometer.this, ConfirmActivity.class);
+                    startActivity(i);
+                } else {
+                    Toast msg = Toast.makeText(getApplicationContext(), "Tuvimos un problema:" + ErrorCode, Toast.LENGTH_LONG);
+                    msg.show();
+                }
+            }catch (Exception e){
+                showAlerta();
+            }
+        }
+    }
+//*******************************************not attribute =! class*********************************
+    public class getCobroTask extends AsyncTask<Boolean, Void, Void> {
+        ProgressDialog progress = new ProgressDialog(VehicleOdometer.this);
+        String respuesta="",ErrorCode = "";
+        AlertDialog alert;
+        boolean isPagar;
+
+    @Override
+        protected void onPreExecute() {
+            progress.setTitle("Odómetro");
+            progress.setMessage("Enviando información...");
+            progress.setIndeterminate(true);
+            progress.setCancelable(false);
+            //progress.setIcon(R.drawable.miituo);
+            progress.show();
+        }
+
+        @Override
+        protected void onCancelled() {
+            progress.dismiss();
+            Toast msg = Toast.makeText(getApplicationContext(), ErrorCode, Toast.LENGTH_LONG);
+            msg.show();
+
+            super.onCancelled();
+        }
+
+        @Override
+        protected Void doInBackground(Boolean... params) {
+            try {
+                isPagar = params[0];
+                respuesta = api.ConfirmReport(ApiSendReportCancelation,tok,true, params[0]);
+            } catch (Exception ex) {
+                ErrorCode = ex.getMessage();
+                this.cancel(true);
+            }
+            return null;
+        }
+
+        @Override
+        protected void onPostExecute(Void aVoid){
+            try {
+                progress.dismiss();
+                if(!isPagar) {
+    //                                Intent i = new Intent(VehicleOdometer.this, NoReporteOdometroActivity.class);
+    //                                i.putExtra("json", respuesta);
+    //                                startActivityForResult(i, CANCEL);
+                    showPago(respuesta);
+                }
+                else{
+                    JSONObject json=new JSONObject(respuesta);
+                    JSONObject datos=json.getJSONArray("ResulList").getJSONObject(0);
+                    boolean isOK=datos.isNull("ConfirmReport")?false:datos.getBoolean("ConfirmReport");
+
+                    if (isOK) {
+                        AlertDialog.Builder builder = new AlertDialog.Builder(VehicleOdometer.this);
+                        builder.setTitle("Error");
+                        builder.setMessage("Error al subir información. Intente más tarde");
+                        builder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                Intent i = new Intent(VehicleOdometer.this, PrincipalActivity.class);
+                                finish();
+                                startActivity(i);
+                            }
+                        });
+                        AlertDialog alerta = builder.create();
+                        alerta.show();
+                    } else {
+                        new android.app.AlertDialog.Builder(VehicleOdometer.this)
+                            .setTitle("Gracias.")
+                            .setMessage("Tu información ha sido actualizada.")
+                            .setCancelable(false)
+                            .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    IinfoClient.getInfoClientObject().getPolicies().setLastOdometer(IinfoClient.getInfoClientObject().getPolicies().getRegOdometer());
+                                    IinfoClient.getInfoClientObject().getPolicies().setReportState(12);
+
+                                    //String rs = UpdateDataBase(modelBase.FeedEntryPoliza.TABLE_NAME,IinfoClient.getInfoClientObject().getPolicies().getNoPolicy());
+
+                                    Intent i = new Intent(VehicleOdometer.this, PrincipalActivity.class);
+                                    i.putExtra("actualizar","1");
+                                    finish();
+                                    startActivity(i);
+                                }
+                            })
+                            .show();
+                    }
+                }
+            }catch(Exception e){
+                e.printStackTrace();
+            }
+        }
+
+        public void showPago(String resp){
+            String noDias="";
+            String saldo="";
+            try{
+                JSONObject json = new JSONObject(resp);
+                JSONObject datos = json.getJSONArray("ResulList").getJSONObject(0);
+                noDias=datos.getString("Dias_sin_reportar");
+                saldo=datos.getString("amount");
+            }
+            catch (Exception e){
+                e.printStackTrace();
+            }
+            final AlertDialog.Builder sort = new AlertDialog.Builder(VehicleOdometer.this);
+            // Get the layout inflater
+            LayoutInflater inflater = getLayoutInflater();
+            View sortView = inflater.inflate(R.layout.activity_no_reporte_odometro, null);
+            sort.setView(sortView);
+            sort.setCancelable(false);
+            TextView back=(TextView) sortView.findViewById(R.id.btnRegresar);
+            TextView pagar=(TextView) sortView.findViewById(R.id.btnPagar);
+            TextView dias=(TextView) sortView.findViewById(R.id.lbGral);
+            dias.setText(Html.fromHtml("<p>Han transcurrido <b>"+noDias+" días" +
+                    "</b> desde tu<br> último reporte de odómetro,<br>tu <b>cargo es de $"+saldo+"</b></p>"));
+            back.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    alert.dismiss();
+                }
+            });
+            pagar.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    sendodo = new sendOdometro();
+                    sendodo.execute("NO");
+                }
+            });
+            alert=sort.create();
+            alert.show();
         }
     }
 }
