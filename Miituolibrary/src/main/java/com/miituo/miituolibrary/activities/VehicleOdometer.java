@@ -327,6 +327,9 @@ public class VehicleOdometer extends AppCompatActivity {
 //                            .into(Img5);
 //                }
 //                IsTaken = true;
+                IsTaken = true;
+                btn6.setText("Continuar");
+
             }
         }
         catch(Exception e){
@@ -431,11 +434,14 @@ public class VehicleOdometer extends AppCompatActivity {
                     api.UploadPhoto(6, bmp, UrlApi, tok, "", "0", "0", "");
                 } else {
                     //Subimos foto de odometro.....
-                    mCurrentPhotoPath = app_preferences.getString("nombrefotoodometro", "null");
+                    //mCurrentPhotoPath = app_preferences.getString("nombrefotoodometro", "null");
                     BitmapFactory.Options options = new BitmapFactory.Options();
                     options.inSampleSize = 4;
                     bmp = BitmapFactory.decodeFile(mCurrentPhotoPath, options);
                     String lat = null, lon = null, cp = null;
+                    lat="0";
+                    lon="0";
+                    cp="";
                     api.UploadPhoto((tipoodometro.equals("cancela") ? 6 : 5), bmp, UrlApi, tok, odo, lat, lon, cp);
                 }
                 IinfoClient.InfoClientObject.getPolicies().setRegOdometer(Integer.parseInt("1000"));

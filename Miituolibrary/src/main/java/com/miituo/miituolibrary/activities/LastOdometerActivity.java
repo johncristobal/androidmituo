@@ -76,11 +76,12 @@ public class LastOdometerActivity extends AppCompatActivity {
         odometroAnterior = getIntent().getStringExtra("valor");
         tok = IinfoClient.getInfoClientObject().getClient().getToken();
 
-        app_preferences= getSharedPreferences("miituo", Context.MODE_PRIVATE);
+        app_preferences = getSharedPreferences(getString(R.string.shared_name_prefs), Context.MODE_PRIVATE);
         tipoodometro = app_preferences.getString("odometro","null");
 
         //get image and how into imageview here
-        SharedPreferences preferences = getSharedPreferences("miituo", Context.MODE_PRIVATE);
+        SharedPreferences preferences = getSharedPreferences(getString(R.string.shared_name_prefs), Context.MODE_PRIVATE);
+
         String mCurrentPhotoPath = preferences.getString("nombrefotoodometro", "null");
 
         String filePath = mCurrentPhotoPath;
