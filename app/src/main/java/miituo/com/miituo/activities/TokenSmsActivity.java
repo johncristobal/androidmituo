@@ -145,6 +145,8 @@ public class TokenSmsActivity extends AppCompatActivity {
 
         LogHelper.log(this,LogHelper.user_interaction,"TokenSmsActivity.reenviar", "getingToken again", "","",  "", "");
         threadtosync hilos = new threadtosync();
+        final GlobalActivity globalVariable = (GlobalActivity) getApplicationContext();
+        result = globalVariable.getPolizas();
         hilos.SyncToken.execute(telefon, result.get(0).getPolicies().getId() + "", "Apptoken");
 //        hilos.SyncToken.execute(telefon, result.get(0).getClient().getEmail() + "", "Apptoken");
 

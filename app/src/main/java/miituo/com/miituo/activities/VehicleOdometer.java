@@ -55,6 +55,7 @@ import miituo.com.miituo.R;
 import miituo.com.miituo.api.ApiClient;
 import miituo.com.miituo.data.DBaseMethods;
 import miituo.com.miituo.data.IinfoClient;
+import miituo.com.miituo.data.InfoClient;
 import miituo.com.miituo.data.modelBase;
 import miituo.com.miituo.utils.LogHelper;
 
@@ -66,6 +67,8 @@ import com.google.android.gms.vision.text.TextRecognizer;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
+
+import static miituo.com.miituo.activities.MainActivity.result;
 
 public class VehicleOdometer extends BaseActivity {
 
@@ -134,8 +137,23 @@ public class VehicleOdometer extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_vehicle_odometer);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        tok = IinfoClient.getInfoClientObject().getClient().getToken();
+        //Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        try {
+            tok = IinfoClient.getInfoClientObject().getClient().getToken();
+        }catch (Exception e){
+            try {
+                final GlobalActivity globalVariable = (GlobalActivity) getApplicationContext();
+                List<InfoClient> polizas = globalVariable.getPolizas();
+                if (polizas.size() > 0) {
+                    tok = polizas.get(0).getClient().getToken();
+                } else {
+                    Toast.makeText(this, "Sin autorización, intente mas tarde.", Toast.LENGTH_SHORT).show();
+                }
+            }catch(Exception ee){
+                Toast.makeText(this, "Tenemos un problema para leer la información. Favor de contactar a miituo para mayor información.", Toast.LENGTH_SHORT).show();
+                finish();
+            }
+        }
 
         typeface = Typeface.createFromAsset(getAssets(), "fonts/herne1.ttf");
         TextView leyenda = (TextView)findViewById(R.id.textView40);
@@ -221,24 +239,28 @@ public class VehicleOdometer extends BaseActivity {
                 //PERMISO = FRONT_VEHICLE;
                 requestPermissions(new String[]{Manifest.permission.CAMERA}, MY_CAMERA_REQUEST_CODE);
             }else{
-                Intent takepic = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-                if (takepic.resolveActivity(getPackageManager()) != null) {
-                    // Create the File where the photo should go
-                    try {
-                        photoFile = createImageFile();
-                    } catch (IOException ex) {
-                        // Error occurred while creating the File...
-                        showAlertaFoto();
-                    }
-                    // Continue only if the File was successfully created
-                    if (photoFile != null) {
-                        Uri photoURI = FileProvider.getUriForFile(VehicleOdometer.this, "miituo.com.miituo.provider", photoFile);
-                        //Uri photoURI = Uri.fromFile(photoFile);
-                        takepic.putExtra(MediaStore.EXTRA_OUTPUT, photoURI);
-                        startActivityForResult(takepic, ODOMETER);
+                if(checkSelfPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED){
+                    requestPermissions(new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 1009);
+                }else {
+                    Intent takepic = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+                    if (takepic.resolveActivity(getPackageManager()) != null) {
+                        // Create the File where the photo should go
+                        try {
+                            photoFile = createImageFile();
+                        } catch (IOException ex) {
+                            // Error occurred while creating the File...
+                            showAlertaFoto();
+                        }
+                        // Continue only if the File was successfully created
+                        if (photoFile != null) {
+                            Uri photoURI = FileProvider.getUriForFile(VehicleOdometer.this, "miituo.com.miituo.provider", photoFile);
+                            //Uri photoURI = Uri.fromFile(photoFile);
+                            takepic.putExtra(MediaStore.EXTRA_OUTPUT, photoURI);
+                            startActivityForResult(takepic, ODOMETER);
 //                        Intent i= new Intent(this,CamActivity.class);
 //                        i.putExtra("img",photoFile);
 //                        startActivityForResult(i,ODOMETER);
+                        }
                     }
                 }
             }
@@ -387,7 +409,7 @@ public class VehicleOdometer extends BaseActivity {
                                                     IinfoClient.getInfoClientObject().getPolicies().setLastOdometer(IinfoClient.getInfoClientObject().getPolicies().getRegOdometer());
                                                     IinfoClient.getInfoClientObject().getPolicies().setReportState(12);
 
-                                                    String rs = UpdateDataBase(modelBase.FeedEntryPoliza.TABLE_NAME,IinfoClient.getInfoClientObject().getPolicies().getNoPolicy());
+                                                    //String rs = UpdateDataBase(modelBase.FeedEntryPoliza.TABLE_NAME,IinfoClient.getInfoClientObject().getPolicies().getNoPolicy());
 
                                                     Intent i = new Intent(VehicleOdometer.this, PrincipalActivity.class);
                                                     i.putExtra("actualizar","1");

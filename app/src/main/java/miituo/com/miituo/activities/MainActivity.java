@@ -11,6 +11,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.VideoView;
@@ -48,13 +49,14 @@ public class MainActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        String tokenF = FirebaseInstanceId.getInstance().getToken();
-        print("token: " + tokenF);
+        //String tokenF = FirebaseInstanceId.getInstance().getToken();
+        //print("token: " + tokenF);
 
-        base = new modelBase(getApplicationContext(), Integer.parseInt(getResources().getString(R.string.dbversion)));
-        DBaseMethods.base = base;
-        app_preferences = getSharedPreferences("miituo", Context.MODE_PRIVATE);
-        sesion = app_preferences.getString("sesion", "null");
+        try {
+            base = new modelBase(getApplicationContext(), Integer.parseInt(getResources().getString(R.string.dbversion)));
+            DBaseMethods.base = base;
+            app_preferences = getSharedPreferences("miituo", Context.MODE_PRIVATE);
+            sesion = app_preferences.getString("sesion", "null");
 
 //        ShortcutBadger.applyCount(this,1);
 
@@ -65,59 +67,82 @@ public class MainActivity extends BaseActivity {
 //            return;
 //        }
 
-        Bundle b = getIntent().getExtras();
-        String idPush = null;
-        idPush = b != null ? b.getString("idPush", null) : null;
-        String idPushS = null;
-        idPushS = getIntent().getStringExtra("idPush");
-        print(" idPush: " + idPush + "\nidPushS: " + idPushS);
+            Bundle b = getIntent().getExtras();
+            String idPush = null;
+            idPush = b != null ? b.getString("idPush", null) : null;
+            String idPushS = null;
+            idPushS = getIntent().getStringExtra("idPush");
+            //print(" idPush: " + idPush + "\nidPushS: " + idPushS);
 //        idPush="3";
-        if (idPush != null && !idPush.equalsIgnoreCase("") && (idPush.equalsIgnoreCase("2") || idPush.equalsIgnoreCase("3"))
-                || idPushS != null && !idPushS.equalsIgnoreCase("") && (idPushS.equalsIgnoreCase("2") || idPushS.equalsIgnoreCase("3"))) {
-            if (idPush != null && (!idPush.equalsIgnoreCase(""))) {
-                isNormalStart = false;
-                pushStart(idPush, b.getString("tarifa", null),b.getBoolean("fromPrincipal",false));
+            if (idPush != null && !idPush.equalsIgnoreCase("") && (idPush.equalsIgnoreCase("2") || idPush.equalsIgnoreCase("3"))
+                    || idPushS != null && !idPushS.equalsIgnoreCase("") && (idPushS.equalsIgnoreCase("2") || idPushS.equalsIgnoreCase("3"))) {
+                if (idPush != null && (!idPush.equalsIgnoreCase(""))) {
+                    isNormalStart = false;
+                    pushStart(idPush, b.getString("tarifa", null), b.getBoolean("fromPrincipal", false));
+                } else {
+                    isNormalStart = true;
+                    pushStart(idPushS, getIntent().getStringExtra("tarifa"), getIntent().getBooleanExtra("fromPrincipal", false));
+                }
             } else {
-                isNormalStart = true;
-                pushStart(idPushS, getIntent().getStringExtra("tarifa"),getIntent().getBooleanExtra("fromPrincipal",false));
+                normalStart();
             }
-        } else {
+            startService(new Intent(this, GcmIntentService.class));
+        }catch (Exception e){
+            e.printStackTrace();
             normalStart();
         }
-        startService(new Intent(this, GcmIntentService.class));
     }
 
     private void normalStart() {
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
-        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        setContentView(R.layout.activity_main);
-        mVideoView = (VideoView) findViewById(R.id.videoView);
-        String uri = "android.resource://" + getPackageName() + "/" + R.raw.logo_ani_miituo;
-        if (mVideoView != null) {
-            mVideoView.setVideoURI(Uri.parse(uri));
-            mVideoView.setZOrderOnTop(true);
-            mVideoView.requestFocus();
-            mVideoView.start();
-        }
-        TimerTask task = new TimerTask() {
-            @Override
-            public void run() {
-//                startActivity(new Intent(getApplicationContext(),MapsActivity.class));
-                if (sesion.equals("1")) {
-                    Intent i = new Intent(getApplicationContext(), SyncActivity.class);
-                    i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                    finish();
-                    startActivity(i);
-                } else {
-                    Intent i = new Intent(getApplicationContext(), TutorialActivity.class);
-                    i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                    finish();
-                    startActivity(i);
-                }
+        try {
+            requestWindowFeature(Window.FEATURE_NO_TITLE);
+            this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+            setContentView(R.layout.activity_main);
+            mVideoView = (VideoView) findViewById(R.id.videoView);
+            String uri = "android.resource://" + getPackageName() + "/" + R.raw.logo_ani_miituo;
+            if (mVideoView != null) {
+                mVideoView.setVideoURI(Uri.parse(uri));
+                mVideoView.setZOrderOnTop(true);
+                mVideoView.requestFocus();
+                mVideoView.start();
             }
-        };
-        Timer timer = new Timer();
-        timer.schedule(task, SPLASH_SCREEN_DELAY);
+            TimerTask task = new TimerTask() {
+                @Override
+                public void run() {
+//                startActivity(new Intent(getApplicationContext(),MapsActivity.class));
+                    if (sesion.equals("1")) {
+                        Intent i = new Intent(getApplicationContext(), SyncActivity.class);
+                        i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                        finish();
+                        startActivity(i);
+                    } else {
+                        Intent i = new Intent(getApplicationContext(), TutorialActivity.class);
+                        i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                        finish();
+                        startActivity(i);
+                    }
+                }
+            };
+            Timer timer = new Timer();
+            timer.schedule(task, SPLASH_SCREEN_DELAY);
+        }catch (Exception e){
+            e.printStackTrace();
+            ImageView img = findViewById(R.id.imagetemp);
+            mVideoView = (VideoView) findViewById(R.id.videoView);
+            img.setVisibility(View.VISIBLE);
+            mVideoView.setVisibility(View.GONE);
+            if (sesion.equals("1")) {
+                Intent i = new Intent(getApplicationContext(), SyncActivity.class);
+                i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                finish();
+                startActivity(i);
+            } else {
+                Intent i = new Intent(getApplicationContext(), SyncActivity.class);
+                i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                finish();
+                startActivity(i);
+            }
+        }
     }
 
     private void pushStart(String idPush, String tarifa,boolean fromPrincipal) {
@@ -178,7 +203,7 @@ public class MainActivity extends BaseActivity {
                     lbl4.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Intent intent2 = new Intent(Intent.ACTION_DIAL, Uri.fromParts("tel", "018009530059", null));
+                        Intent intent2 = new Intent(Intent.ACTION_DIAL, Uri.fromParts("tel", "8009530059", null));
                         startActivity(intent2);
                     }
                 });

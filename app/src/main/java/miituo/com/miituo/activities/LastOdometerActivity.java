@@ -398,7 +398,7 @@ public class LastOdometerActivity extends AppCompatActivity {
                                     //IinfoClient.getInfoClientObject().getPolicies().setHasOdometerPicture(true);
                                     IinfoClient.getInfoClientObject().getPolicies().setReportState(12);
 
-                                    String rs = UpdateDataBase(modelBase.FeedEntryPoliza.TABLE_NAME,IinfoClient.getInfoClientObject().getPolicies().getNoPolicy());
+                                    //String rs = UpdateDataBase(modelBase.FeedEntryPoliza.TABLE_NAME,IinfoClient.getInfoClientObject().getPolicies().getNoPolicy());
 
                                     Intent i = new Intent(LastOdometerActivity.this, PrincipalActivity.class);
                                     i.putExtra("actualizar","1");
@@ -430,7 +430,7 @@ public class LastOdometerActivity extends AppCompatActivity {
                 LogHelper.sendLog(LastOdometerActivity.this,IinfoClient.getInfoClientObject().getPolicies().getId());
             }
 
-            public String UpdateDataBase(String...strings){
+            /*public String UpdateDataBase(String...strings){
 
                 String val = strings[0];
                 //Log.w("Here",val);
@@ -465,7 +465,7 @@ public class LastOdometerActivity extends AppCompatActivity {
                         break;
                 }
                 return "";
-            }
+            }*/
         };
         sendOdometro.execute();
     }
@@ -543,7 +543,7 @@ public class LastOdometerActivity extends AppCompatActivity {
                                     IinfoClient.getInfoClientObject().getPolicies().setHasOdometerPicture(true);
                                     IinfoClient.getInfoClientObject().getPolicies().setReportState(12);
 
-                                    String rs = UpdateDataBase(modelBase.FeedEntryPoliza.TABLE_NAME,IinfoClient.getInfoClientObject().getPolicies().getNoPolicy());
+                                    //String rs = UpdateDataBase(modelBase.FeedEntryPoliza.TABLE_NAME,IinfoClient.getInfoClientObject().getPolicies().getNoPolicy());
 
                                     Intent i = new Intent(LastOdometerActivity.this, PrincipalActivity.class);
                                     i.putExtra("actualizar","1");
@@ -576,7 +576,7 @@ public class LastOdometerActivity extends AppCompatActivity {
                 LogHelper.sendLog(LastOdometerActivity.this,IinfoClient.getInfoClientObject().getPolicies().getId());
             }
 
-            public String UpdateDataBase(String...strings){
+            /*public String UpdateDataBase(String...strings){
 
                 String val = strings[0];
                 //Log.w("Here",val);
@@ -611,7 +611,7 @@ public class LastOdometerActivity extends AppCompatActivity {
                         break;
                 }
                 return "";
-            }
+            }*/
         };
         sendOdometro.execute();
     }
@@ -880,14 +880,21 @@ public class LastOdometerActivity extends AppCompatActivity {
                                     "","id:"+IinfoClient.getInfoClientObject().getPolicies().getId(),"");
                             for (int i=0;i<cupones.length();i++) {
                                 JSONObject o = cupones.getJSONObject(i);
-                                if(o.getInt("Type")==3){
+                                //if(o.getInt("Type")==3){
+                                if(o.getInt("Type")==3 || o.getInt("Type")==5){
                                     lbVacaciones.setVisibility(View.VISIBLE);
                                     LinearLayout ll=(LinearLayout)dialog.findViewById(R.id.cntVacaciones);
                                     ll.setVisibility(View.VISIBLE);
                                     diferencia=parametro_tope_kms;
                                     lbVacaciones2.setText(diferencia);
                                     if(cupones.length()==2){
-                                        JSONObject o2 = cupones.getJSONObject(i+1);
+                                        //JSONObject o2 = cupones.getJSONObject(i+1);
+                                        JSONObject o2 = cupones.getJSONObject(0);
+                                        if (o.getInt("Type")==5){
+                                            o2 = cupones.getJSONObject(0);
+                                        }else{
+                                            o2 = cupones.getJSONObject(1);
+                                        }
                                         int dif=Integer.parseInt(parametro_tope_kms)-o2.getInt("Kms");
                                         diferencia=""+dif;
                                         LinearLayout ll2=(LinearLayout)dialog.findViewById(R.id.cntReferidos);
@@ -1013,14 +1020,14 @@ public class LastOdometerActivity extends AppCompatActivity {
                         ending2.setTypeface(typefacebold);
                         //ending.setText(formatter.format(s1));
                         if(datoamount.equalsIgnoreCase("0.0")){
-                            ending2.setText("$ 0.00"
-                            );
+                            ending2.setText("$ 0.00");
                         }
                         else {
                             ending2.setText(formatter.format(s1));
                         }
                         dialog.show();
                     }catch(Exception e){
+
                         e.printStackTrace();
                     }
                 }
@@ -1033,8 +1040,6 @@ public class LastOdometerActivity extends AppCompatActivity {
             e.printStackTrace();
         }
     }
-
-
 
     public void saygoodbye(){
         AsyncTask<Void, Void, Void> sendthelast = new AsyncTask<Void, Void, Void>() {
@@ -1053,31 +1058,49 @@ public class LastOdometerActivity extends AppCompatActivity {
 
             @Override
             protected void onCancelled() {
-                LogHelper.log(LastOdometerActivity.this,LogHelper.backTask,"LastOdometerActivity.sayGoodBye.onCancelled","errorCode: "+ErrorCode,"",
-                        "","id:"+IinfoClient.getInfoClientObject().getPolicies().getId(),"");
-                progress.dismiss();
-                //Toast msg = Toast.makeText(getApplicationContext(), ErrorCode, Toast.LENGTH_LONG);
-                //msg.show();
+                try {
+                    LogHelper.log(LastOdometerActivity.this, LogHelper.backTask, "LastOdometerActivity.sayGoodBye.onCancelled", "errorCode: " + ErrorCode, "",
+                            "", "id:" + IinfoClient.getInfoClientObject().getPolicies().getId(), "");
+                    progress.dismiss();
+                    //Toast msg = Toast.makeText(getApplicationContext(), ErrorCode, Toast.LENGTH_LONG);
+                    //msg.show();
 
-                new android.app.AlertDialog.Builder(LastOdometerActivity.this)
-                        .setTitle("Atención usuario...")
-                        .setMessage(ErrorCode)
-                        //.setIcon(R.drawable.miituo)
-                        .setCancelable(false)
-                        .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
-                                //progresslast.dismiss();
-                                Intent i = new Intent(LastOdometerActivity.this, PrincipalActivity.class);
-                                i.putExtra("actualizar","1");
-                                startActivity(i);
-                            }
-                        })
-                        .show();
+                    new android.app.AlertDialog.Builder(LastOdometerActivity.this)
+                            .setTitle("Atención usuario...")
+                            .setMessage(ErrorCode)
+                            //.setIcon(R.drawable.miituo)
+                            .setCancelable(false)
+                            .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    //progresslast.dismiss();
+                                    Intent i = new Intent(LastOdometerActivity.this, PrincipalActivity.class);
+                                    i.putExtra("actualizar", "1");
+                                    startActivity(i);
+                                }
+                            })
+                            .show();
 
-                super.onCancelled();
+                    super.onCancelled();
 
-                LogHelper.sendLog(LastOdometerActivity.this,IinfoClient.getInfoClientObject().getPolicies().getId());
+                    LogHelper.sendLog(LastOdometerActivity.this, IinfoClient.getInfoClientObject().getPolicies().getId());
+                }catch(Exception e){
+                    new android.app.AlertDialog.Builder(LastOdometerActivity.this)
+                            .setTitle("Atención usuario...")
+                            .setMessage("Tuvimos un problema, intente más tarde.")
+                            //.setIcon(R.drawable.miituo)
+                            .setCancelable(false)
+                            .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    //progresslast.dismiss();
+                                    Intent i = new Intent(LastOdometerActivity.this, PrincipalActivity.class);
+                                    i.putExtra("actualizar", "1");
+                                    startActivity(i);
+                                }
+                            })
+                            .show();
+                }
             }
 
             @Override
@@ -1129,7 +1152,7 @@ public class LastOdometerActivity extends AppCompatActivity {
                                     IinfoClient.getInfoClientObject().getPolicies().setReportState(12);
                                     IinfoClient.getInfoClientObject().getPolicies().setLastOdometer(IinfoClient.getInfoClientObject().getPolicies().getRegOdometer());
 
-                                    String rs = UpdateDataBase(modelBase.FeedEntryPoliza.TABLE_NAME,IinfoClient.getInfoClientObject().getPolicies().getNoPolicy());
+                                    //String rs = UpdateDataBase(modelBase.FeedEntryPoliza.TABLE_NAME,IinfoClient.getInfoClientObject().getPolicies().getNoPolicy());
 //                                    IinfoClient.getInfoClientObject().getPolicies().setMensualidad(10);
                                     if(IinfoClient.getInfoClientObject().getPolicies().getMensualidad()==10){
                                         getNewQuotation(10);
@@ -1194,7 +1217,7 @@ public class LastOdometerActivity extends AppCompatActivity {
                 }
             }
 
-            public String UpdateDataBase(String...strings){
+            /*public String UpdateDataBase(String...strings){
                 String val = strings[0];
                 //Log.w("Here",val);
 
@@ -1228,7 +1251,7 @@ public class LastOdometerActivity extends AppCompatActivity {
                         break;
                 }
                 return "";
-            }
+            }*/
         };
         sendthelast.execute();
     }

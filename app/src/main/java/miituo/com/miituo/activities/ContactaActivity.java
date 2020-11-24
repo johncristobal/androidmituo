@@ -175,8 +175,8 @@ public class ContactaActivity extends AppCompatActivity {
     }
 
     public void callDos(View view) {
-        telefon = "(01 800 953 0059";
-        Intent intent = new Intent(Intent.ACTION_CALL, Uri.parse("tel:" + "01 800 953 0059"));
+        telefon = "800 953 0059";
+        Intent intent = new Intent(Intent.ACTION_CALL, Uri.parse("tel:" + "800 953 0059"));
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
             String[] PERMISSIONS = {Manifest.permission.CALL_PHONE};
             ActivityCompat.requestPermissions(this, PERMISSIONS, REQUEST);

@@ -83,10 +83,15 @@ public class GetPoliciesData extends AsyncTask<String, Void, Void> {
 
     @Override
     protected void onPostExecute(Void aVoid) {
-        if(progress!=null){
-            progress.dismiss();
+        try {
+            if (progress != null) {
+                progress.dismiss();
+            }
+            cb.run(status, ErrorCode);
+        }catch(Exception e){
+            e.printStackTrace();
+            cb.run(status, ErrorCode);
         }
-        cb.run(status,ErrorCode);
     }
 
     @Override

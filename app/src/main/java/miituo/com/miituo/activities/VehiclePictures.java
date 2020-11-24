@@ -115,8 +115,14 @@ public class VehiclePictures extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
-        polizaFolio = IinfoClient.getInfoClientObject().getPolicies().getNoPolicy();
-        tok = IinfoClient.getInfoClientObject().getClient().getToken();
+        try {
+            polizaFolio = IinfoClient.getInfoClientObject().getPolicies().getNoPolicy();
+            tok = IinfoClient.getInfoClientObject().getClient().getToken();
+        }catch (Exception e){
+            e.printStackTrace();
+            Toast.makeText(this, "Atencion. Contacte al equipo de desarrollo para posible error.", Toast.LENGTH_SHORT).show();
+            finish();
+        }
         flag1 = false;
         flag2 = false;
         flag3 = false;

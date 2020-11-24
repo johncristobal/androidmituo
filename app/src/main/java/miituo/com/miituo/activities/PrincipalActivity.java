@@ -203,6 +203,9 @@ public class PrincipalActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
         navigationView.setItemIconTintList(null);
 
+        final GlobalActivity globalVariable = (GlobalActivity) getApplicationContext();
+        result = globalVariable.getPolizas();
+
         TextView cerrar = (TextView) findViewById(R.id.textView62);
         cerrar.setTypeface(typeface);
         TextView cotizar = (TextView) findViewById(R.id.textView16);
@@ -297,17 +300,17 @@ public class PrincipalActivity extends AppCompatActivity
             }
         });
 
-        final GlobalActivity globalVariable = (GlobalActivity) getApplicationContext();
-        result = globalVariable.getPolizas();
-
         if (result != null) {
             vList = (ListView) findViewById(R.id.listviewinfoclient);
             removeInvalidPolicies();
             vadapter = new VehicleModelAdapter(getApplicationContext(), result, typeface, starttime, this);
             vadapter.notifyDataSetChanged();
             vList.setAdapter(vadapter);
-
-            tokencliente = result.get(0).getClient().getToken();
+            if(result.size() > 0) {
+                tokencliente = result.get(0).getClient().getToken();
+            }else{
+                tokencliente = "";
+            }
         }
 
         String act = getIntent().getStringExtra("actualizar");
@@ -570,10 +573,14 @@ public class PrincipalActivity extends AppCompatActivity
         public void run() {
             runOnUiThread(new Runnable() {
                 public void run() {
-                    if (viewPager.getCurrentItem() == 0) {
-                        viewPager.setCurrentItem(1, true);
-                    } else {
-                        viewPager.setCurrentItem(0, true);
+                    try {
+                        if (viewPager.getCurrentItem() == 0) {
+                            viewPager.setCurrentItem(1, true);
+                        } else {
+                            viewPager.setCurrentItem(0, true);
+                        }
+                    }catch(Exception e){
+                        e.printStackTrace();
                     }
                 }
             });
@@ -826,7 +833,7 @@ public class PrincipalActivity extends AppCompatActivity
             idpoliza = IinfoClient.getInfoClientObject().getPolicies().getId();
 
             //firebase to get tokne....temp for now
-            String token = IinfoClient.getInfoClientObject().getClient().getToken();
+            //String token = IinfoClient.getInfoClientObject().getClient().getToken();
 
             //set token...
             //IinfoClient.getInfoClientObject().getClient().setToken(token);
@@ -1139,7 +1146,7 @@ public class PrincipalActivity extends AppCompatActivity
                 } else {
                     sinPolizas.setVisibility(View.GONE);
                     imgSinPolizas.setVisibility(View.GONE);
-                    swipeContainer.setVisibility(View.VISIBLE);
+                    //swipeContainer.setVisibility(View.VISIBLE);
                     sinPolizas.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
@@ -1198,8 +1205,17 @@ public class PrincipalActivity extends AppCompatActivity
                         vList = (ListView) findViewById(R.id.listviewinfoclient);
                         removeInvalidPolicies();
                         vadapter = new VehicleModelAdapter(getApplicationContext(), result, typeface, starttime, PrincipalActivity.this);
-                        vList.setAdapter(vadapter);
+
                         vadapter.notifyDataSetChanged();
+                        vList.setAdapter(vadapter);
+                        if(result.size() > 0) {
+                            tokencliente = result.get(0).getClient().getToken();
+                        }else{
+                            tokencliente = "";
+                        }
+
+                        //vList.setAdapter(vadapter);
+                        //vadapter.notifyDataSetChanged();
                         swipeContainer.setRefreshing(false);
                     }
                 }

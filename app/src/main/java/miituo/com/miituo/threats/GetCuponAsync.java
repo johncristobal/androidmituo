@@ -50,7 +50,7 @@ public class GetCuponAsync extends AsyncTask<String, Void, Void>{
             resp = ac.getCupon(url);
             status = true;
         }
-        catch (IOException e) {
+        catch (Exception e) {
             e.printStackTrace();
             resp = e.getMessage();
             status = false;
@@ -62,9 +62,14 @@ public class GetCuponAsync extends AsyncTask<String, Void, Void>{
     //la funcion...
     @Override
     protected void onPostExecute(Void aVoid) {
-        if(progress!=null){
-            progress.dismiss();
+        try {
+            if (progress != null) {
+                progress.dismiss();
+            }
+            cb.run(status, resp);
+        }catch(Exception e){
+            e.printStackTrace();
+            cb.run(status, resp);
         }
-        cb.run(status,resp);
     }
 }

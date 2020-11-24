@@ -118,9 +118,9 @@ public class DetallesActivity extends AppCompatActivity {
     }
 
     public void init(){
-        TextView  lbDescargar= (TextView)findViewById(R.id.textView37);
-        TextView poliza = (TextView)findViewById(R.id.textViewpolizadetail);
-        poliza.setTypeface(PagerAdapter.tipo);
+        TextView  lbDescargar = findViewById(R.id.textView37);
+        TextView poliza = findViewById(R.id.textViewpolizadetail);
+        //poliza.setTypeface(PagerAdapter.tipo);
         poliza.setText(IinfoClient.InfoClientObject.getPolicies().getNoPolicy());
         lbDescargar.setTypeface(PagerAdapter.tipo);
         lbDescargar.setOnClickListener(new View.OnClickListener() {
@@ -170,18 +170,6 @@ public class DetallesActivity extends AppCompatActivity {
             //pintaImg(imagen,position);
             pintaImg(fotocarro, IinfoClient.InfoClientObject.getPolicies().getId());
         }
-        /*
-        File image = new File(getExternalFilesDir(Environment.DIRECTORY_PICTURES)+File.separator+"frontal"+PagerAdapter.tiempo+IinfoClient.InfoClientObject.getPolicies().getNoPolicy()+".png");
-        File image2 = new File(getExternalFilesDir(Environment.DIRECTORY_PICTURES)+File.separator+"frontal_"+IinfoClient.InfoClientObject.getPolicies().getNoPolicy()+".png");
-        if(image.exists()){
-            Bitmap myBitmap = BitmapFactory.decodeFile(image.getAbsolutePath());
-            Bitmap resized = Bitmap.createScaledBitmap(myBitmap, myBitmap.getWidth()/4, myBitmap.getHeight()/4, false);
-            fotocarro.setImageBitmap(resized);
-        }else if(image2.exists()){
-            Bitmap myBitmap = BitmapFactory.decodeFile(image2.getAbsolutePath());
-            Bitmap resized = Bitmap.createScaledBitmap(myBitmap, myBitmap.getWidth()/4, myBitmap.getHeight()/4, false);
-            fotocarro.setImageBitmap(resized);
-        }*/
     }
 
     private void pintaImg(ImageView iv, int id) {

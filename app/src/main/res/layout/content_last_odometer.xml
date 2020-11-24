@@ -17,7 +17,8 @@
         android:layout_marginTop="30dp"
         android:text="Una vez más"
         android:textSize="24sp"
-        android:layout_marginStart="50dp" />
+        android:layout_marginStart="50dp"
+        android:layout_marginLeft="50dp" />
 
     <RelativeLayout
         android:id="@+id/relativeLayout4"
