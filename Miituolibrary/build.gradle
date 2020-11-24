@@ -31,8 +31,7 @@ task sourceJar(type: Jar) {
 afterEvaluate {
     publishing {
         publications {
-            miituo(MavenPublication) {
-                from components.release
+            mavenJava(MavenPublication) {
                 groupId 'com.miituo.miituolibrary'
                 artifactId 'miituolibrary'
                 version '0.1'
