@@ -9,14 +9,15 @@ android:layout_height="match_parent"
 tools:context=".activities.DetallesActivity"
 android:background="@android:color/white">
 
-<View
+<ImageView
     android:id="@+id/imageView"
     android:layout_width="match_parent"
     android:layout_height="100dp"
-    android:background="#fff"
+    android:background="@color/beige_miituo"
     android:padding="1dp"
     android:scaleType="fitEnd"
     android:layout_alignParentTop="true"
+    android:src="@android:color/white"
     android:layout_alignParentStart="true" />
 
 <de.hdodenhof.circleimageview.CircleImageView
@@ -38,6 +39,7 @@ android:background="@android:color/white">
     android:layout_marginStart="15dp"
     android:text="Poliza"
     android:textColor="#000000"
+    android:textStyle="bold"
     android:textSize="20sp"
     android:layout_marginTop="8dp"
     android:layout_alignTop="@+id/imageView5"
@@ -60,7 +62,8 @@ android:background="@android:color/white">
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_alignParentBottom="true"
-    android:background="@color/colorLightGray"
+    android:background="?attr/colorPrimary"
+    android:elevation="6dp"
     android:minHeight="?attr/actionBarSize"
     android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"/>
 

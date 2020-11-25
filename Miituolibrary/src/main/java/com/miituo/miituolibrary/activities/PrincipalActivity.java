@@ -10,8 +10,6 @@ import android.content.SharedPreferences;
 import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.ImageView;
 import android.widget.ListView;
 
 import com.google.gson.Gson;
@@ -49,14 +47,6 @@ public class PrincipalActivity extends AppCompatActivity implements CallBack {
 
         app_preferences = getSharedPreferences(getString(R.string.shared_name_prefs), Context.MODE_PRIVATE);
         getPolizasData(telefono);
-
-        ImageView imageViewClose = findViewById(R.id.imageViewClose);
-        imageViewClose.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-            }
-        });
     }
 
     @Override
