@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/DEVAndroid.iml" filepath="$PROJECT_DIR$/.idea/modules/DEVAndroid.iml" group="DEVAndroid" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Miituolibrary/Miituolibrary.iml" filepath="$PROJECT_DIR$/.idea/modules/Miituolibrary/Miituolibrary.iml" group="DEVAndroid/Miituolibrary" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="DEVAndroid/app" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Miituolibrary/Miituolibrary.iml" filepath="$PROJECT_DIR$/.idea/modules/Miituolibrary/Miituolibrary.iml" group="androidmituo/Miituolibrary" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/androidmituo.iml" filepath="$PROJECT_DIR$/.idea/modules/androidmituo.iml" group="androidmituo" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="androidmituo/app" />
     </modules>
   </component>
 </project>
