@@ -887,7 +887,7 @@ public class VehiclePictures extends AppCompatActivity {
                 showAlerta();
             }
         }
-    };
+    }
 
 //reporte firt time*********************************************************************************
     //thread to call api and save furst odometer

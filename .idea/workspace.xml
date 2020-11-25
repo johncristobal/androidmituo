@@ -15,7 +15,33 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="832192c8-8c1e-4c27-be84-e71f6025cf42" name="Default" comment="" />
+    <list default="true" id="832192c8-8c1e-4c27-be84-e71f6025cf42" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/Miituolibrary/src/main/java/com/miituo/miituolibrary/activities/adapters/PromosAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Miituolibrary/src/main/java/com/miituo/miituolibrary/activities/threats/GetCuponAsync.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Miituolibrary/src/main/res/drawable/copy.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Miituolibrary/src/main/res/layout/kms100.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Miituolibrary/src/main/res/layout/kms1200.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/jarAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Miituolibrary/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Miituolibrary/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Miituolibrary/src/main/java/com/miituo/miituolibrary/activities/PrincipalActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/Miituolibrary/src/main/java/com/miituo/miituolibrary/activities/PrincipalActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Miituolibrary/src/main/java/com/miituo/miituolibrary/activities/VehicleOdometer.java" beforeDir="false" afterPath="$PROJECT_DIR$/Miituolibrary/src/main/java/com/miituo/miituolibrary/activities/VehicleOdometer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Miituolibrary/src/main/java/com/miituo/miituolibrary/activities/VehiclePictures.java" beforeDir="false" afterPath="$PROJECT_DIR$/Miituolibrary/src/main/java/com/miituo/miituolibrary/activities/VehiclePictures.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Miituolibrary/src/main/res/layout/activity_vehicle_odometer.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Miituolibrary/src/main/res/layout/activity_vehicle_odometer.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Miituolibrary/src/main/res/layout/fragment_tab4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Miituolibrary/src/main/res/layout/fragment_tab4.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/activities/VehiclePictures.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/activities/VehiclePictures.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/api/ApiClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/api/ApiClient.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -84,9 +110,9 @@
       <list>
         <option value="valueResourceFile" />
         <option value="Interface" />
+        <option value="resourceFile" />
         <option value="layoutResourceFile" />
         <option value="Class" />
-        <option value="resourceFile" />
       </list>
     </option>
   </component>
@@ -157,12 +183,9 @@
     <option name="LAST_EDITED_BUILD_TYPE" value="release" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/Miituolibrary/src/main/res/drawable" />
-      <recent name="$PROJECT_DIR$/Miituolibrary/src/main/res/values" />
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/src/main/res/font" />
-      <recent name="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/threats" />
-      <recent name="$PROJECT_DIR$/app/src/main/res/drawable-v24" />
+      <recent name="$PROJECT_DIR$/app/src/main/assets/fonts" />
     </key>
     <key name="android.template.-114908505">
       <recent name="com.miituo.miituolibrary.activities" />
@@ -173,9 +196,12 @@
     <key name="android.template.1715494168">
       <recent name="com.miituo.miituolibrary.activities" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Miituolibrary/src/main/res/drawable" />
+      <recent name="$PROJECT_DIR$/Miituolibrary/src/main/res/values" />
       <recent name="$PROJECT_DIR$/app/src/main/res/font" />
-      <recent name="$PROJECT_DIR$/app/src/main/assets/fonts" />
+      <recent name="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/threats" />
+      <recent name="$PROJECT_DIR$/app/src/main/res/drawable-v24" />
     </key>
   </component>
   <component name="RunManager" selected="Gradle.DEVAndroid:Miituolibrary [assemble]">
@@ -272,6 +298,25 @@
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
+    </configuration>
+    <configuration name="DEVAndroid:Miituolibrary [assembleAndroidTest]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/Miituolibrary" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="assembleAndroidTest" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
     </configuration>
     <configuration name="DEVAndroid:Miituolibrary [assemble]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
@@ -388,6 +433,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.DEVAndroid:Miituolibrary [assembleAndroidTest]" />
         <item itemvalue="Gradle.DEVAndroid:Miituolibrary [publishBarPublicationToMavenRepository]" />
         <item itemvalue="Gradle.DEVAndroid:Miituolibrary [publish]" />
         <item itemvalue="Gradle.DEVAndroid:Miituolibrary [assemble]" />
@@ -423,10 +469,10 @@
       <screen x="0" y="23" width="1280" height="737" />
     </state>
     <state x="228" y="153" key="AndroidCreateResourceDirectoryDialog/0.23.1280.737@0.23.1280.737" timestamp="1605812185228" />
-    <state x="228" y="284" key="AndroidCreateResourceFileDialog" timestamp="1605812226294">
+    <state x="292" y="224" key="AndroidCreateResourceFileDialog" timestamp="1606326438796">
       <screen x="0" y="23" width="1280" height="737" />
     </state>
-    <state x="228" y="284" key="AndroidCreateResourceFileDialog/0.23.1280.737@0.23.1280.737" timestamp="1605812226294" />
+    <state x="292" y="224" key="AndroidCreateResourceFileDialog/0.23.1280.737@0.23.1280.737" timestamp="1606326438796" />
     <state x="495" y="245" key="AndroidCreateXmlResourceDialog" timestamp="1605813070518">
       <screen x="0" y="23" width="1280" height="737" />
     </state>
@@ -436,28 +482,28 @@
     </state>
     <state x="496" y="163" key="AndroidProcessChooserDialog/0.23.1280.737@0.23.1280.737" timestamp="1603484532720" />
     <state x="558" y="181" key="AndroidProcessChooserDialog/0.23.1440.832@0.23.1440.832" timestamp="1603767872104" />
-    <state width="1238" height="228" key="GridCell.Tab.0.bottom" timestamp="1606318692393">
+    <state width="1238" height="228" key="GridCell.Tab.0.bottom" timestamp="1606326972776">
       <screen x="0" y="23" width="1280" height="737" />
     </state>
-    <state width="1238" height="228" key="GridCell.Tab.0.bottom/0.23.1280.737@0.23.1280.737" timestamp="1606318692393" />
+    <state width="1238" height="228" key="GridCell.Tab.0.bottom/0.23.1280.737@0.23.1280.737" timestamp="1606326972776" />
     <state width="1398" height="266" key="GridCell.Tab.0.bottom/0.23.1440.829@0.23.1440.829" timestamp="1603585296210" />
     <state width="1398" height="219" key="GridCell.Tab.0.bottom/0.23.1440.832@0.23.1440.832" timestamp="1603853943551" />
-    <state width="1238" height="228" key="GridCell.Tab.0.center" timestamp="1606318692392">
+    <state width="1238" height="228" key="GridCell.Tab.0.center" timestamp="1606326972774">
       <screen x="0" y="23" width="1280" height="737" />
     </state>
-    <state width="1238" height="228" key="GridCell.Tab.0.center/0.23.1280.737@0.23.1280.737" timestamp="1606318692392" />
+    <state width="1238" height="228" key="GridCell.Tab.0.center/0.23.1280.737@0.23.1280.737" timestamp="1606326972774" />
     <state width="1398" height="266" key="GridCell.Tab.0.center/0.23.1440.829@0.23.1440.829" timestamp="1603585296210" />
     <state width="1398" height="219" key="GridCell.Tab.0.center/0.23.1440.832@0.23.1440.832" timestamp="1603853943551" />
-    <state width="1238" height="228" key="GridCell.Tab.0.left" timestamp="1606318692392">
+    <state width="1238" height="228" key="GridCell.Tab.0.left" timestamp="1606326972774">
       <screen x="0" y="23" width="1280" height="737" />
     </state>
-    <state width="1238" height="228" key="GridCell.Tab.0.left/0.23.1280.737@0.23.1280.737" timestamp="1606318692392" />
+    <state width="1238" height="228" key="GridCell.Tab.0.left/0.23.1280.737@0.23.1280.737" timestamp="1606326972774" />
     <state width="1398" height="266" key="GridCell.Tab.0.left/0.23.1440.829@0.23.1440.829" timestamp="1603585296210" />
     <state width="1398" height="219" key="GridCell.Tab.0.left/0.23.1440.832@0.23.1440.832" timestamp="1603853943551" />
-    <state width="1238" height="228" key="GridCell.Tab.0.right" timestamp="1606318692393">
+    <state width="1238" height="228" key="GridCell.Tab.0.right" timestamp="1606326972775">
       <screen x="0" y="23" width="1280" height="737" />
     </state>
-    <state width="1238" height="228" key="GridCell.Tab.0.right/0.23.1280.737@0.23.1280.737" timestamp="1606318692393" />
+    <state width="1238" height="228" key="GridCell.Tab.0.right/0.23.1280.737@0.23.1280.737" timestamp="1606326972775" />
     <state width="1398" height="266" key="GridCell.Tab.0.right/0.23.1440.829@0.23.1440.829" timestamp="1603585296210" />
     <state width="1398" height="219" key="GridCell.Tab.0.right/0.23.1440.832@0.23.1440.832" timestamp="1603853943551" />
     <state x="0" y="462" width="1398" height="267" key="GridCell.Tab.1.bottom" timestamp="1603772539311">
@@ -484,10 +530,10 @@
     <state width="1238" height="217" key="GridCell.Tab.1.right/0.23.1280.737@0.23.1280.737" timestamp="1603485512769" />
     <state x="0" y="462" width="1398" height="266" key="GridCell.Tab.1.right/0.23.1440.829@0.23.1440.829" timestamp="1603585296209" />
     <state width="1398" height="267" key="GridCell.Tab.1.right/0.23.1440.832@0.23.1440.832" timestamp="1603772539311" />
-    <state x="141" y="30" key="SettingsEditor" timestamp="1603375891353">
+    <state x="141" y="30" key="SettingsEditor" timestamp="1606324706164">
       <screen x="0" y="23" width="1280" height="737" />
     </state>
-    <state x="141" y="30" key="SettingsEditor/0.23.1280.737@0.23.1280.737" timestamp="1603375891353" />
+    <state x="141" y="30" key="SettingsEditor/0.23.1280.737@0.23.1280.737" timestamp="1606324706164" />
     <state x="89" y="111" width="1103" height="560" key="com.android.tools.idea.avdmanager.AvdListDialog" timestamp="1604428563034">
       <screen x="0" y="23" width="1280" height="737" />
     </state>
