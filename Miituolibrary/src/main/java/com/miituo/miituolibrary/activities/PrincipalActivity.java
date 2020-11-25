@@ -11,6 +11,7 @@ import android.content.SharedPreferences;
 import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -61,10 +62,15 @@ public class PrincipalActivity extends AppCompatActivity implements CallBack {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_principal);
 
-        telefono = getIntent().getStringExtra("telefono");
-
         app_preferences = getSharedPreferences(getString(R.string.shared_name_prefs), Context.MODE_PRIVATE);
-        getPolizasData(telefono);
+
+        telefono = getIntent().getStringExtra("telefono");
+        if(telefono == null){
+            telefono = app_preferences.getString("Celphone","null");
+            if(telefono.equals("null")){
+                launchAlert("No cuentas con pólizas activas.");
+            }
+        }
 
         ImageView imageViewClose = findViewById(R.id.imageViewClose);
         imageViewClose.setOnClickListener(new View.OnClickListener() {
@@ -77,10 +83,8 @@ public class PrincipalActivity extends AppCompatActivity implements CallBack {
 
     @Override
     protected void onResume() {
+        getPolizasData(telefono);
         super.onResume();
-        pageSwitcher();
-        obtenerCupon();
-        //getPolizasData(telefono);
     }
 
     public void pageSwitcher() {
@@ -115,12 +119,15 @@ public class PrincipalActivity extends AppCompatActivity implements CallBack {
             @Override
             public void run(boolean status, String res) {
                 if (status) {
+                    Log.e("tag_miituo", ""+status);
                     try {
                         //Crear los elementos json para obtener los datos del servicio...
                         JSONArray array = new JSONArray(res);
                         JSONObject o = array.getJSONObject(0);
                         JSONObject cupones = o.getJSONObject("Cupones");
                         Double kms = cupones.getDouble("Kms");
+                        Log.e("tag_miituo", ""+kms);
+
                         InicializarBanners(kms);
                         //Toast.makeText(PrincipalActivity.this, "kilometraje:"+ kms, Toast.LENGTH_SHORT).show();
                     } catch (JSONException e) {
@@ -134,12 +141,15 @@ public class PrincipalActivity extends AppCompatActivity implements CallBack {
         });
         gp.execute();
     }
+
     public void InicializarBanners(Double kms){
         viewPager = (ViewPager) findViewById(R.id.view_pager);
+        Log.e("tag_miituo", ""+kms);
         String cupon = "";
         if (result != null && result.size() > 0) {
             cupon = result.get(0).getClient().getCupon();
         }
+        Log.e("tag_miituo", ""+cupon);
         adapter = new PromosAdapter(this, cupon, kms.intValue());
         viewPager.setAdapter(adapter);
         viewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
@@ -167,13 +177,16 @@ public class PrincipalActivity extends AppCompatActivity implements CallBack {
             public void onPageScrollStateChanged(int arg0) {
             }
         });
+
+        Log.e("tag_miituo", "dots");
+
         dotsLayout = (LinearLayout) findViewById(R.id.layoutDots);
         dotsLayout.removeAllViews();
         TextView tv = (TextView) findViewById(R.id.terms);
         tv.setText("Aplica un cupón al mes por póliza solo si \n" +
                 "reportaste tu odómetro y pagaste el mes anterior.");
         addBottomDots(0);
-        //pageSwitcher();
+        pageSwitcher();
     }
 
     private void addBottomDots(int currentPage) {
@@ -194,6 +207,20 @@ public class PrincipalActivity extends AppCompatActivity implements CallBack {
             dots[currentPage].setTextColor(colorsActive[currentPage]);
     }
 
+    public void launchAlert(String res){
+        android.app.AlertDialog.Builder builder = new android.app.AlertDialog.Builder(PrincipalActivity.this);
+        builder.setTitle("Atención");
+        builder.setMessage(res);
+        builder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                PrincipalActivity.this.finish();
+            }
+        });
+        android.app.AlertDialog alerta = builder.create();
+        alerta.show();
+    }
+
     public void getPolizasData(final String telefono){
         String url = "InfoClientMobil/Celphone/"+telefono;
         new GetPoliciesData(url, PrincipalActivity.this, new SimpleCallBack() {
@@ -201,7 +228,7 @@ public class PrincipalActivity extends AppCompatActivity implements CallBack {
             public void run(boolean status, String res) {
                 if (!status){
                     String data[] = res.split("@");
-                    //launchAlert(data[1]);
+                    launchAlert(data[1]);
                 }else{
                     //tenemos polizas, recuperamos list y mandamos a sms...
                     SharedPreferences.Editor editor = app_preferences.edit();
@@ -217,12 +244,15 @@ public class PrincipalActivity extends AppCompatActivity implements CallBack {
                     //globalVariable.setPolizas(InfoList);
 
                     result = InfoList;
+
                     if (result.size() < 1) {
-                        //showViews(true);
+                        launchAlert("No cuenta con pólizas activas.");
                     }else{
                         //showViews(false);
                         String na = result.get(0).getClient().getName();
                         app_preferences.edit().putString("nombre", na).apply();
+                        TextView textViewNombre = findViewById(R.id.textViewNombre);
+                        textViewNombre.setText(na);
                         long starttime = app_preferences.getLong("time", 0);
                         vList = (ListView) findViewById(R.id.listviewinfoclient);
                         //removeInvalidPolicies();
@@ -235,6 +265,8 @@ public class PrincipalActivity extends AppCompatActivity implements CallBack {
                         }else{
                             tokencliente = "";
                         }
+
+                        obtenerCupon();
 
                         //vList.setAdapter(vadapter);
                         //vadapter.notifyDataSetChanged();
@@ -364,4 +396,5 @@ public class PrincipalActivity extends AppCompatActivity implements CallBack {
         alerta = builder.create();
         alerta.show();
     }
+
 }
