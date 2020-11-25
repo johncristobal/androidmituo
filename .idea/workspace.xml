@@ -16,16 +16,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="832192c8-8c1e-4c27-be84-e71f6025cf42" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/Miituolibrary/Miituolibrary.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/Miituolibrary/Miituolibrary.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Miituolibrary/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/Miituolibrary/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/api/ApiClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/miituo/com/miituo/api/ApiClient.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,7 +30,7 @@
     <option name="testRunner" value="GRADLE" />
     <option name="delegatedBuild" value="true" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="Pixel_2_API_24_A7" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="18e5a83c" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -152,7 +146,7 @@
     <property name="android.sdk.path" value="$USER_HOME$/Library/Android/sdk" />
     <property name="device.picker.selection" value="34MDU16510001427" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/Miituolibrary/src/main/res/drawable" />
-    <property name="memory.settings.postsync.last.time.stamp" value="1606226447943" />
+    <property name="memory.settings.postsync.last.time.stamp" value="1606317344393" />
     <property name="not.eligible.for.single.variant.sync" value="true" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.17" />
@@ -189,7 +183,7 @@
       <recent name="$PROJECT_DIR$/app/src/main/assets/fonts" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.DEVAndroid:Miituolibrary [publish]">
+  <component name="RunManager" selected="Android App.app">
     <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
@@ -504,12 +498,12 @@
     </state>
     <state x="89" y="111" width="1103" height="560" key="com.android.tools.idea.avdmanager.AvdListDialog/0.23.1280.737@0.23.1280.737" timestamp="1604428563034" />
     <state x="100" y="123" width="1241" height="633" key="com.android.tools.idea.avdmanager.AvdListDialog/0.23.1440.832@0.23.1440.832" timestamp="1603765879907" />
-    <state x="289" y="224" key="com.intellij.ide.util.TipDialog" timestamp="1606226491959">
+    <state x="289" y="224" key="com.intellij.ide.util.TipDialog" timestamp="1606317405678">
       <screen x="0" y="23" width="1280" height="737" />
     </state>
     <state x="289" y="223" key="com.intellij.ide.util.TipDialog/0.23.1280.733@0.23.1280.733" timestamp="1599230135679" />
     <state x="289" y="223" key="com.intellij.ide.util.TipDialog/0.23.1280.734@0.23.1280.734" timestamp="1598284569352" />
-    <state x="289" y="224" key="com.intellij.ide.util.TipDialog/0.23.1280.737@0.23.1280.737" timestamp="1606226491959" />
+    <state x="289" y="224" key="com.intellij.ide.util.TipDialog/0.23.1280.737@0.23.1280.737" timestamp="1606317405678" />
     <state x="325" y="249" key="com.intellij.ide.util.TipDialog/0.23.1440.829@0.23.1440.829" timestamp="1603579839866" />
     <state x="325" y="250" key="com.intellij.ide.util.TipDialog/0.23.1440.832@0.23.1440.832" timestamp="1603846653984" />
   </component>
