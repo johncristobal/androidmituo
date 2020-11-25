@@ -16,10 +16,58 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="832192c8-8c1e-4c27-be84-e71f6025cf42" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/Miituolibrary/src/main/res/drawable/back.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Miituolibrary/src/main/res/drawable/border_detail.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Miituolibrary/src/main/res/drawable/camara.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Miituolibrary/src/main/res/drawable/closex.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Miituolibrary/src/main/res/drawable/docs.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Miituolibrary/src/main/res/drawable/estado.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Miituolibrary/src/main/res/drawable/export.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Miituolibrary/src/main/res/drawable/graylogo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Miituolibrary/src/main/res/drawable/logo_atlas.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Miituolibrary/src/main/res/drawable/pay.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Miituolibrary/src/main/res/drawable/phoneblack.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Miituolibrary/src/main/res/drawable/redphone.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Miituolibrary/src/main/res/drawable/siniestro.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Miituolibrary/src/main/res/drawable/timer.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Miituolibrary/src/main/res/drawable/vista_auto_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Miituolibrary/src/main/res/drawable/vista_auto_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Miituolibrary/src/main/res/drawable/vista_auto_3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Miituolibrary/src/main/res/drawable/vista_auto_4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Miituolibrary/src/main/res/layout/mensaje_fotos.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Miituolibrary/src/main/res/values/styles.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/Miituolibrary/Miituolibrary.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/Miituolibrary/Miituolibrary.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/jarAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Miituolibrary/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Miituolibrary/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Miituolibrary/src/main/java/com/miituo/miituolibrary/activities/DetallesActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/Miituolibrary/src/main/java/com/miituo/miituolibrary/activities/DetallesActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Miituolibrary/src/main/java/com/miituo/miituolibrary/activities/PrincipalActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/Miituolibrary/src/main/java/com/miituo/miituolibrary/activities/PrincipalActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Miituolibrary/src/main/java/com/miituo/miituolibrary/activities/VehiclePictures.java" beforeDir="false" afterPath="$PROJECT_DIR$/Miituolibrary/src/main/java/com/miituo/miituolibrary/activities/VehiclePictures.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Miituolibrary/src/main/java/com/miituo/miituolibrary/activities/adapters/VehicleModelAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/Miituolibrary/src/main/java/com/miituo/miituolibrary/activities/adapters/VehicleModelAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Miituolibrary/src/main/res/drawable/button.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Miituolibrary/src/main/res/drawable/button.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Miituolibrary/src/main/res/drawable/buttonwhite.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Miituolibrary/src/main/res/drawable/buttonwhite.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Miituolibrary/src/main/res/layout/activity_confirm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Miituolibrary/src/main/res/layout/activity_confirm.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Miituolibrary/src/main/res/layout/activity_detalles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Miituolibrary/src/main/res/layout/activity_detalles.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Miituolibrary/src/main/res/layout/activity_last_odometer.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Miituolibrary/src/main/res/layout/activity_last_odometer.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Miituolibrary/src/main/res/layout/activity_principal.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Miituolibrary/src/main/res/layout/activity_principal.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Miituolibrary/src/main/res/layout/activity_vehicle_odometer.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Miituolibrary/src/main/res/layout/activity_vehicle_odometer.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Miituolibrary/src/main/res/layout/activity_vehicle_pictures.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Miituolibrary/src/main/res/layout/activity_vehicle_pictures.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Miituolibrary/src/main/res/layout/custom_alert.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Miituolibrary/src/main/res/layout/custom_alert.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Miituolibrary/src/main/res/layout/custom_validation_odometer.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Miituolibrary/src/main/res/layout/custom_validation_odometer.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Miituolibrary/src/main/res/layout/fragment_tab1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Miituolibrary/src/main/res/layout/fragment_tab1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Miituolibrary/src/main/res/layout/fragment_tab2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Miituolibrary/src/main/res/layout/fragment_tab2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Miituolibrary/src/main/res/layout/fragment_tab4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Miituolibrary/src/main/res/layout/fragment_tab4.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Miituolibrary/src/main/res/layout/infoclient_item.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Miituolibrary/src/main/res/layout/infoclient_item.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Miituolibrary/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Miituolibrary/src/main/res/values/colors.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Miituolibrary/src/main/res/xml/provider_paths.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Miituolibrary/src/main/res/xml/provider_paths.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -183,7 +231,7 @@
       <recent name="$PROJECT_DIR$/app/src/main/assets/fonts" />
     </key>
   </component>
-  <component name="RunManager" selected="Android App.app">
+  <component name="RunManager" selected="Gradle.DEVAndroid:Miituolibrary [assemble]">
     <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
@@ -441,28 +489,28 @@
     </state>
     <state x="496" y="163" key="AndroidProcessChooserDialog/0.23.1280.737@0.23.1280.737" timestamp="1603484532720" />
     <state x="558" y="181" key="AndroidProcessChooserDialog/0.23.1440.832@0.23.1440.832" timestamp="1603767872104" />
-    <state width="1238" height="228" key="GridCell.Tab.0.bottom" timestamp="1606235339661">
+    <state width="1238" height="228" key="GridCell.Tab.0.bottom" timestamp="1606318692393">
       <screen x="0" y="23" width="1280" height="737" />
     </state>
-    <state width="1238" height="228" key="GridCell.Tab.0.bottom/0.23.1280.737@0.23.1280.737" timestamp="1606235339661" />
+    <state width="1238" height="228" key="GridCell.Tab.0.bottom/0.23.1280.737@0.23.1280.737" timestamp="1606318692393" />
     <state width="1398" height="266" key="GridCell.Tab.0.bottom/0.23.1440.829@0.23.1440.829" timestamp="1603585296210" />
     <state width="1398" height="219" key="GridCell.Tab.0.bottom/0.23.1440.832@0.23.1440.832" timestamp="1603853943551" />
-    <state width="1238" height="228" key="GridCell.Tab.0.center" timestamp="1606235339660">
+    <state width="1238" height="228" key="GridCell.Tab.0.center" timestamp="1606318692392">
       <screen x="0" y="23" width="1280" height="737" />
     </state>
-    <state width="1238" height="228" key="GridCell.Tab.0.center/0.23.1280.737@0.23.1280.737" timestamp="1606235339660" />
+    <state width="1238" height="228" key="GridCell.Tab.0.center/0.23.1280.737@0.23.1280.737" timestamp="1606318692392" />
     <state width="1398" height="266" key="GridCell.Tab.0.center/0.23.1440.829@0.23.1440.829" timestamp="1603585296210" />
     <state width="1398" height="219" key="GridCell.Tab.0.center/0.23.1440.832@0.23.1440.832" timestamp="1603853943551" />
-    <state width="1238" height="228" key="GridCell.Tab.0.left" timestamp="1606235339660">
+    <state width="1238" height="228" key="GridCell.Tab.0.left" timestamp="1606318692392">
       <screen x="0" y="23" width="1280" height="737" />
     </state>
-    <state width="1238" height="228" key="GridCell.Tab.0.left/0.23.1280.737@0.23.1280.737" timestamp="1606235339660" />
+    <state width="1238" height="228" key="GridCell.Tab.0.left/0.23.1280.737@0.23.1280.737" timestamp="1606318692392" />
     <state width="1398" height="266" key="GridCell.Tab.0.left/0.23.1440.829@0.23.1440.829" timestamp="1603585296210" />
     <state width="1398" height="219" key="GridCell.Tab.0.left/0.23.1440.832@0.23.1440.832" timestamp="1603853943551" />
-    <state width="1238" height="228" key="GridCell.Tab.0.right" timestamp="1606235339661">
+    <state width="1238" height="228" key="GridCell.Tab.0.right" timestamp="1606318692393">
       <screen x="0" y="23" width="1280" height="737" />
     </state>
-    <state width="1238" height="228" key="GridCell.Tab.0.right/0.23.1280.737@0.23.1280.737" timestamp="1606235339661" />
+    <state width="1238" height="228" key="GridCell.Tab.0.right/0.23.1280.737@0.23.1280.737" timestamp="1606318692393" />
     <state width="1398" height="266" key="GridCell.Tab.0.right/0.23.1440.829@0.23.1440.829" timestamp="1603585296210" />
     <state width="1398" height="219" key="GridCell.Tab.0.right/0.23.1440.832@0.23.1440.832" timestamp="1603853943551" />
     <state x="0" y="462" width="1398" height="267" key="GridCell.Tab.1.bottom" timestamp="1603772539311">
