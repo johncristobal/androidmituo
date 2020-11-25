@@ -35,6 +35,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Timer;
 import java.util.TimerTask;
@@ -64,6 +65,56 @@ public class PrincipalActivity extends AppCompatActivity implements CallBack {
 
         app_preferences = getSharedPreferences(getString(R.string.shared_name_prefs), Context.MODE_PRIVATE);
 
+        result = new ArrayList<>();
+        long starttime = app_preferences.getLong("time", 0);
+        vadapter = new VehicleModelAdapter(getApplicationContext(), result, starttime, PrincipalActivity.this);
+        vList = (ListView) findViewById(R.id.listviewinfoclient);
+        vList.setAdapter(vadapter);
+
+        viewPager = (ViewPager) findViewById(R.id.view_pager);
+        String cupon = "";
+        if (result != null && result.size() > 0) {
+            cupon = result.get(0).getClient().getCupon();
+        }
+        Log.e("tag_miituo", ""+cupon);
+        adapter = new PromosAdapter(this, cupon, 100);
+        viewPager.setAdapter(adapter);
+        viewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+
+            @Override
+            public void onPageSelected(int position) {
+                TextView tv = (TextView) findViewById(R.id.terms);
+                if (position == 1) {
+                    tv.setText("*Consulta términos y condiciones.");
+                } else {
+                    tv.setText("*Aplica un cupón al mes por póliza solo si \n" +
+                            "reportaste tu odómetro y pagaste el mes anterior.");
+                }
+                addBottomDots(position);
+                timer.cancel();
+                pageSwitcher();
+            }
+
+            @Override
+            public void onPageScrolled(int arg0, float arg1, int arg2) {
+            }
+
+
+            @Override
+            public void onPageScrollStateChanged(int arg0) {
+            }
+        });
+
+        Log.e("tag_miituo", "dots");
+
+        dotsLayout = (LinearLayout) findViewById(R.id.layoutDots);
+        dotsLayout.removeAllViews();
+        TextView tv = (TextView) findViewById(R.id.terms);
+        tv.setText("Aplica un cupón al mes por póliza solo si \n" +
+                "reportaste tu odómetro y pagaste el mes anterior.");
+        addBottomDots(0);
+        pageSwitcher();
+
         telefono = getIntent().getStringExtra("telefono");
         if(telefono == null){
             telefono = app_preferences.getString("Celphone","null");
@@ -87,11 +138,61 @@ public class PrincipalActivity extends AppCompatActivity implements CallBack {
         super.onResume();
     }
 
+    public void getPolizasData(final String telefono){
+        String url = "InfoClientMobil/Celphone/"+telefono;
+        new GetPoliciesData(url, PrincipalActivity.this, new SimpleCallBack() {
+            @Override
+            public void run(boolean status, String res) {
+                if (!status){
+                    String data[] = res.split("@");
+                    launchAlert(data[1]);
+                }else{
+                    //tenemos polizas, recuperamos list y mandamos a sms...
+                    SharedPreferences.Editor editor = app_preferences.edit();
+                    editor.putString("polizas", res);
+                    editor.putString("Celphone", telefono);
+                    editor.apply();
+
+                    Gson parseJson = new GsonBuilder().setDateFormat("yyyy-MM-dd'T'hh:mm:ss").create();
+                    List<InfoClient> InfoList = parseJson.fromJson(res, new TypeToken<List<InfoClient>>() {
+                    }.getType());
+
+                    //final GlobalActivity globalVariable = (GlobalActivity) getApplicationContext();
+                    //globalVariable.setPolizas(InfoList);
+
+                    result = InfoList;
+
+                    if (result.size() < 1) {
+                        launchAlert("No cuenta con pólizas activas.");
+                    }else{
+                        String na = result.get(0).getClient().getName();
+                        app_preferences.edit().putString("nombre", na).apply();
+                        TextView textViewNombre = findViewById(R.id.textViewNombre);
+                        textViewNombre.setText(na);
+
+                        vadapter.updateReceiptsList(result);
+
+                        if(result.size() > 0) {
+                            tokencliente = result.get(0).getClient().getToken();
+                        }else{
+                            tokencliente = "";
+                        }
+
+                        obtenerCupon();
+
+                        //vList.setAdapter(vadapter);
+                        //vadapter.notifyDataSetChanged();
+                        //swipeContainer.setRefreshing(false);
+                    }
+                }
+            }
+        }).execute();
+    }
+
     public void pageSwitcher() {
         timer = new Timer(); // At this line a new Thread will be created
         timer.schedule(new RemindTask(), 9000, 9000);
     }
-    // this is an inner class...
     class RemindTask extends TimerTask {
         @Override
         public void run() {
@@ -143,50 +244,14 @@ public class PrincipalActivity extends AppCompatActivity implements CallBack {
     }
 
     public void InicializarBanners(Double kms){
-        viewPager = (ViewPager) findViewById(R.id.view_pager);
         Log.e("tag_miituo", ""+kms);
+
         String cupon = "";
         if (result != null && result.size() > 0) {
             cupon = result.get(0).getClient().getCupon();
         }
-        Log.e("tag_miituo", ""+cupon);
-        adapter = new PromosAdapter(this, cupon, kms.intValue());
-        viewPager.setAdapter(adapter);
-        viewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
-
-            @Override
-            public void onPageSelected(int position) {
-                TextView tv = (TextView) findViewById(R.id.terms);
-                if (position == 1) {
-                    tv.setText("*Consulta términos y condiciones.");
-                } else {
-                    tv.setText("*Aplica un cupón al mes por póliza solo si \n" +
-                            "reportaste tu odómetro y pagaste el mes anterior.");
-                }
-                addBottomDots(position);
-                timer.cancel();
-                pageSwitcher();
-            }
-
-            @Override
-            public void onPageScrolled(int arg0, float arg1, int arg2) {
-            }
-
-
-            @Override
-            public void onPageScrollStateChanged(int arg0) {
-            }
-        });
-
-        Log.e("tag_miituo", "dots");
-
-        dotsLayout = (LinearLayout) findViewById(R.id.layoutDots);
-        dotsLayout.removeAllViews();
-        TextView tv = (TextView) findViewById(R.id.terms);
-        tv.setText("Aplica un cupón al mes por póliza solo si \n" +
-                "reportaste tu odómetro y pagaste el mes anterior.");
+        adapter.updateBanners(kms.intValue(), cupon);
         addBottomDots(0);
-        pageSwitcher();
     }
 
     private void addBottomDots(int currentPage) {
@@ -219,62 +284,6 @@ public class PrincipalActivity extends AppCompatActivity implements CallBack {
         });
         android.app.AlertDialog alerta = builder.create();
         alerta.show();
-    }
-
-    public void getPolizasData(final String telefono){
-        String url = "InfoClientMobil/Celphone/"+telefono;
-        new GetPoliciesData(url, PrincipalActivity.this, new SimpleCallBack() {
-            @Override
-            public void run(boolean status, String res) {
-                if (!status){
-                    String data[] = res.split("@");
-                    launchAlert(data[1]);
-                }else{
-                    //tenemos polizas, recuperamos list y mandamos a sms...
-                    SharedPreferences.Editor editor = app_preferences.edit();
-                    editor.putString("polizas", res);
-                    editor.putString("Celphone", telefono);
-                    editor.apply();
-
-                    Gson parseJson = new GsonBuilder().setDateFormat("yyyy-MM-dd'T'hh:mm:ss").create();
-                    List<InfoClient> InfoList = parseJson.fromJson(res, new TypeToken<List<InfoClient>>() {
-                    }.getType());
-
-                    //final GlobalActivity globalVariable = (GlobalActivity) getApplicationContext();
-                    //globalVariable.setPolizas(InfoList);
-
-                    result = InfoList;
-
-                    if (result.size() < 1) {
-                        launchAlert("No cuenta con pólizas activas.");
-                    }else{
-                        //showViews(false);
-                        String na = result.get(0).getClient().getName();
-                        app_preferences.edit().putString("nombre", na).apply();
-                        TextView textViewNombre = findViewById(R.id.textViewNombre);
-                        textViewNombre.setText(na);
-                        long starttime = app_preferences.getLong("time", 0);
-                        vList = (ListView) findViewById(R.id.listviewinfoclient);
-                        //removeInvalidPolicies();
-                        vadapter = new VehicleModelAdapter(getApplicationContext(), result, starttime, PrincipalActivity.this);
-
-                        vadapter.notifyDataSetChanged();
-                        vList.setAdapter(vadapter);
-                        if(result.size() > 0) {
-                            tokencliente = result.get(0).getClient().getToken();
-                        }else{
-                            tokencliente = "";
-                        }
-
-                        obtenerCupon();
-
-                        //vList.setAdapter(vadapter);
-                        //vadapter.notifyDataSetChanged();
-                        //swipeContainer.setRefreshing(false);
-                    }
-                }
-            }
-        }).execute();
     }
 
     @Override

@@ -51,6 +51,12 @@ public class VehicleModelAdapter extends BaseAdapter {
         pathPhotos = new ApiClient(this.mContext).pathPhotos;
     }
 
+    public void updateReceiptsList(List<InfoClient> newlist) {
+        mInfoClientList.clear();
+        mInfoClientList.addAll(newlist);
+        this.notifyDataSetChanged();
+    }
+
     @Override
     public int getCount() {
         return mInfoClientList.size();

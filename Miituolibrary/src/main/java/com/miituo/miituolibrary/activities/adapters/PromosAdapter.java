@@ -33,7 +33,12 @@ public class PromosAdapter extends PagerAdapter
         this.codigo=codigo;
         this.kms = kms;
         Log.e("tag_miituo", ""+codigo);
+    }
 
+    public void updateBanners(int codigo, String cupon) {
+        this.kms=codigo;
+        this.codigo=cupon;
+        this.notifyDataSetChanged();
     }
 
     @Override
@@ -88,5 +93,10 @@ public class PromosAdapter extends PagerAdapter
     public void destroyItem(ViewGroup container, int position, Object object) {
         View view = (View) object;
         container.removeView(view);
+    }
+
+    @Override
+    public int getItemPosition(Object object) {
+        return POSITION_NONE;
     }
 }
